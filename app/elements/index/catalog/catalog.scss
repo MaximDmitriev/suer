@@ -1,0 +1,219 @@
+.catalog {
+  padding: 80px 0 110px 0;
+  @media(max-width: 1199px) {
+    padding: 65px 0 95px 0;
+  }
+  @media(max-width: 767px) {
+    padding: 40px 0;
+  }
+  flex-direction: column;
+  align-items: center;
+  &__wrap {
+    position: relative;
+    align-items: center;
+  }
+  &__popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 80px;
+    right: 15px;
+    bottom: 0;
+    left: 15px;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.15);
+    background: #ffffff;
+    visibility: hidden;
+    opacity: 0;
+    transition: .8s;
+    @media(max-width: 1199px) {
+      top: 70px;
+    }
+    @media(max-width: 797px) {
+      top: 60px;
+      bottom: initial;
+    }
+    @media(max-width: 767px) {
+      align-items: flex-start;
+      justify-content: center;
+      padding: 15px;
+    }
+    &_active {
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  &__popup-img {
+    width: 235px;
+    flex: none;
+    @media(max-width: 991px) {
+      width: 150px;
+    }
+    @media(max-width: 767px) {
+      display: none;
+    }
+  }
+  &__popup-info {
+    padding-left: 130px;
+    @media(max-width: 991px) {
+      padding-left: 65px;
+    }
+    @media(max-width: 767px) {
+      padding-left: 0;
+    }
+  }
+  &__popup-title {
+    color: $txt-color;
+    font-family: $title-font;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: left;
+    @media(max-width: 767px) {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+  &__popup-list {
+    display: flex;
+    margin-top: 45px;
+    @media(max-width: 767px) {
+      flex-direction: column;
+    }
+  }
+  &__popup-list-box {
+    width: 270px;
+    @media(max-width: 991px) {
+      width: 200px;
+    }
+    @media(max-width: 767px) {
+      &:not(:first-child) {
+        margin-top: 30px;
+      }
+    }
+    .radio {
+      &:not(:first-child) {
+        margin-top: 30px;
+      }
+    }
+  }
+  &__popup-footer {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    @media(max-width: 767px) {
+      flex-direction: column;
+    }
+  }
+  &__back-btn {
+    color: #22a8d1;
+    text-decoration: underline;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: 30px;
+    letter-spacing: 0.48px;
+    @media(max-width: 767px) {
+      margin-left: 0;
+      margin-top: 15px;
+    }
+    &:hover {
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: 76px 0 36px 0;
+    @media(max-width: 1199px) {
+      margin: 60px 0 30px 0;
+    }
+    @media(max-width: 767px) {
+      margin-top: 25px;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(25% - 14px);
+    height: 231px;
+    margin: 14px 0;
+    border-radius: 4px;
+    border: 1px solid #e7e7e7;
+    transition: 0.4s;
+    @media(max-width: 767px) {
+      width: calc(50% - 5px);
+      margin: 5px 0;
+      height: auto;
+      padding: 15px 0;
+    }
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+  &__item-img {
+    max-width: 100%;
+  }
+  &__item-name {
+    margin-top: 23px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 32px;
+    font-family: $title-font;
+    color: $txt-color;
+    text-align: center;
+    @media(max-width: 767px) {
+      font-size: 12px;
+    }
+  }
+  &__btn {
+    box-shadow: none;
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+  }
+
+  &__checkbox-real {
+    display: none;
+
+    &:checked {
+      +.catalog__checkbox-fake {
+        background-color: $btn-color;
+        border: 1px solid $btn-color;
+      }
+    }
+  }
+
+  &__checkbox-fake {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  &__checkbox-text {
+    margin: 0 5px;
+  }
+
+  &__check-svg {
+    fill: #ffffff;
+  }
+}

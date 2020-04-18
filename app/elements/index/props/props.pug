@@ -1,0 +1,138 @@
+.props__wrapper
+    .props.-right.-signal.hidden-props
+        +svg('close', 'props__close-svg')
+        ._header
+                ._btn(data-role="select") Выделить все
+                ._btn(data-role="clear") Отменить все
+        ._scroll.scrollbar-inner
+            ._body
+                ._col
+                    ._col-title Аналоговый
+                    ._list
+                        ._list-item
+                            label(for="props-check-1")._checkbox
+                                input(type="checkbox" name="props-check")#props-check-1._checkbox-real
+                                ._checkbox-fake
+                                    +svg('checked', 'props__check-svg')
+                                ._checkbox-text 4-20 мА:
+                            ._num (8)
+                        ._list-item
+                            label(for="props-check-2")._checkbox
+                                input(type="checkbox" name="props-check")#props-check-2._checkbox-real
+                                ._checkbox-fake
+                                    +svg('checked', 'props__check-svg')
+                                ._checkbox-text 20-4 мА:
+                            ._num (8)
+                        ._list-item
+                            label(for="props-check-3")._checkbox
+                                input(type="checkbox" name="props-check")#props-check-3._checkbox-real
+                                ._checkbox-fake
+                                    +svg('checked', 'props__check-svg')
+                                ._checkbox-text 0-5 мА:
+                            ._num (8)
+                    ._btn(data-role="rollup") показать недоступные
+                    ._list.-empty.hidden
+                        ._list-item
+                            label(for="props-check-4")._checkbox
+                                input(type="checkbox" name="props-check" disabled)#props-check-4._checkbox-real
+                                ._checkbox-fake
+                                    +svg('checked', 'props__check-svg')
+                                ._checkbox-text 1-5 В:
+                            ._num (0)
+                            ._note почему?
+                        ._list-item
+                            label(for="props-check-5")._checkbox
+                                input(type="checkbox" name="props-check" disabled)#props-check-5._checkbox-real
+                                ._checkbox-fake
+                                    +svg('checked', 'props__check-svg')
+                                ._checkbox-text 0,8-3,2 В:
+                            ._num (0)
+                            ._note почему?
+                ._col
+                    ._col-title Цифровой
+                    ._list
+                        ._list-item
+                            label(for="props-check-6")._checkbox
+                                input(type="checkbox" name="props-check")#props-check-6._checkbox-real
+                                ._checkbox-fake
+                                    +svg('checked', 'props__check-svg')
+                                ._checkbox-text HART 5:
+                            ._num (15)
+                        ._list-item
+                            label(for="props-check-7")._checkbox
+                                input(type="checkbox" name="props-check")#props-check-7._checkbox-real
+                                ._checkbox-fake
+                                    +svg('checked', 'props__check-svg')
+                                ._checkbox-text HART 7:
+                            ._num (2)
+                        ._list-item
+                            label(for="props-check-8")._checkbox
+                                input(type="checkbox" name="props-check")#props-check-8._checkbox-real
+                                ._checkbox-fake
+                                    +svg('checked', 'props__check-svg')
+                                ._checkbox-text Foundation fieldbus:
+                            ._num (2)
+                        ._list-item
+                            label(for="props-check-9")._checkbox
+                                input(type="checkbox" name="props-check")#props-check-9._checkbox-real
+                                ._checkbox-fake
+                                    +svg('checked', 'props__check-svg')
+                                ._checkbox-text Profibus-PA:
+                            ._num (2)
+                        ._list-item
+                            label(for="props-check-10")._checkbox
+                                input(type="checkbox" name="props-check")#props-check-10._checkbox-real
+                                ._checkbox-fake
+                                    +svg('checked', 'props__check-svg')
+                                ._checkbox-text Profibus-DP:
+                            ._num (8)
+                        ._list-item
+                            label(for="props-check-11")._checkbox
+                                input(type="checkbox" name="props-check")#props-check-11._checkbox-real
+                                ._checkbox-fake
+                                    +svg('checked', 'props__check-svg')
+                                ._checkbox-text Profibus-DP:
+                            ._num (2)
+                        ._list-item
+                            label(for="props-check-12")._checkbox
+                                input(type="checkbox" name="props-check")#props-check-12._checkbox-real
+                                ._checkbox-fake
+                                    +svg('checked', 'props__check-svg')
+                                ._checkbox-text Wireless:
+                            ._num (2)
+                    ._btn(data-role="show") Показать все
+                    ._list.-lower.hidden
+                        ._list-item
+                            label(for="props-check-35")._checkbox
+                                input(type="checkbox" name="props-check")#props-check-35._checkbox-real
+                                ._checkbox-fake
+                                    +svg('checked', 'props__check-svg')
+                                ._checkbox-text HART 5:
+                            ._num (15)
+                        ._list-item
+                            label(for="props-check-36")._checkbox
+                                input(type="checkbox" name="props-check")#props-check-36._checkbox-real
+                                ._checkbox-fake
+                                    +svg('checked', 'props__check-svg')
+                                ._checkbox-text HART 7:
+                            ._num (2)
+                        ._list-item
+                            label(for="props-check-37")._checkbox
+                                input(type="checkbox" name="props-check")#props-check-37._checkbox-real
+                                ._checkbox-fake
+                                    +svg('checked', 'props__check-svg')
+                                ._checkbox-text Foundation fieldbus:
+                            ._num (2)
+                        ._list-item
+                            label(for="props-check-38")._checkbox
+                                input(type="checkbox" name="props-check")#props-check-38._checkbox-real
+                                ._checkbox-fake
+                                    +svg('checked', 'props__check-svg')
+                                ._checkbox-text Profibus-PA:
+                            ._num (2)
+        ._footer
+            ._footer-btn.-left
+                +svg('arrow-left', 'props__arrow')
+            button._footer-btn-find.btn Найти
+            ._footer-btn.-right
+                +svg('arrow-right', 'props__arrow')

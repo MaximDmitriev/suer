@@ -1,0 +1,88 @@
+.props__wrapper
+    .props.-right.-construct.hidden-props
+        +svg('close', 'props__close-svg')
+        ._header
+            ._btn(data-role="select") Выделить все
+            ._btn(data-role="clear") Отменить все
+        ._scroll.scrollbar-inner
+            ._body
+                ._col
+                    ._list
+                        ._list-item.-sublist
+                            label._checkbox
+                                ._checkbox-fake
+                                    +svg('checked', 'props__check-svg')
+                                ._checkbox-text Копланарное исполнение:
+                            ._num (4)
+                            +svg('down', 'selection__property-svg')
+                            ._list.-sublist.hidden
+                                ._list-item
+                                    label(for="props-check-24")._checkbox
+                                        input(type="checkbox" name="props-check")#props-check-24._checkbox-real
+                                        ._checkbox-fake
+                                            +svg('checked', 'props__check-svg')
+                                        ._checkbox-text Подзначение первое:
+                                    ._num (2)
+                                ._list-item
+                                    label(for="props-check-25")._checkbox
+                                        input(type="checkbox" name="props-check")#props-check-25._checkbox-real
+                                        ._checkbox-fake
+                                            +svg('checked', 'props__check-svg')
+                                        ._checkbox-text Подзначение второе:
+                                    ._num (2)
+                                ._list-item
+                                    label(for="props-check-26")._checkbox
+                                        input(type="checkbox" name="props-check")#props-check-26._checkbox-real
+                                        ._checkbox-fake
+                                            +svg('checked', 'props__check-svg')
+                                        ._checkbox-text Значение не указано
+                        ._list-item
+                            label(for="props-check-21")._checkbox
+                                input(type="checkbox" name="props-check")#props-check-21._checkbox-real
+                                ._checkbox-fake
+                                    +svg('checked', 'props__check-svg')
+                                ._checkbox-text Традиционное фланцевое исполнение:
+                            ._num (13)
+                        ._list-item
+                            label(for="props-check-22")._checkbox
+                                input(type="checkbox" name="props-check")#props-check-22._checkbox-real
+                                ._checkbox-fake
+                                    +svg('checked', 'props__check-svg')
+                                ._checkbox-text Штуцерное исполнение:
+                            ._num (19)
+                        ._list-item
+                            label(for="props-check-23")._checkbox
+                                input(type="checkbox" name="props-check")#props-check-23._checkbox-real
+                                ._checkbox-fake
+                                    +svg('checked', 'props__check-svg')
+                                ._checkbox-text С разделительной мембраной:
+                            ._num (4)
+                    ._btn(data-role="show") Показать все
+                    ._list.-lower.hidden
+                        ._list-item
+                            label(for="props-check-30")._checkbox
+                                input(type="checkbox" name="props-check")#props-check-30._checkbox-real
+                                ._checkbox-fake
+                                    +svg('checked', 'props__check-svg')
+                                ._checkbox-text Традиционное фланцевое исполнение:
+                            ._num (13)
+                        ._list-item
+                            label(for="props-check-31")._checkbox
+                                input(type="checkbox" name="props-check")#props-check-31._checkbox-real
+                                ._checkbox-fake
+                                    +svg('checked', 'props__check-svg')
+                                ._checkbox-text Штуцерное исполнение:
+                            ._num (19)
+                        ._list-item
+                            label(for="props-check-32")._checkbox
+                                input(type="checkbox" name="props-check")#props-check-32._checkbox-real
+                                ._checkbox-fake
+                                    +svg('checked', 'props__check-svg')
+                                ._checkbox-text С разделительной мембраной:
+                            ._num (4)
+        ._footer
+            ._footer-btn.-left
+                +svg('arrow-left', 'props__arrow')
+            button._footer-btn-find.btn Найти
+            ._footer-btn.-right
+                +svg('arrow-right', 'props__arrow')

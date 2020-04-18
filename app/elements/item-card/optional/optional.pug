@@ -1,0 +1,164 @@
+.optional.section(data-section="optional")
+    ._wrap.wrap
+        h2._title.section__subtitle Дополнительное оборудование
+        ._nav
+            ._nav-btn-prev(optional-nav="prev")
+                +svg('arrow-left', 'optional__arrow-svg')
+            ._nav-btn-next(optional-nav="next")
+                +svg('arrow-right', 'optional__arrow-svg')
+        ._items
+            .swiper-container(data-slider="optional")
+                .swiper-wrapper
+                    .swiper-slide
+                        .optional__item
+                            img(src="img/accessory1.jpg", alt="extra equipment").optional__item-img
+                            h3.optional__item-title Название аксессуара
+                            .optional__item-btn(data-modal="#optional-modal") Подобрать
+                    .swiper-slide
+                        .optional__item
+                            img(src="img/accessory2.jpg", alt="extra equipment").optional__item-img
+                            h3.optional__item-title Название аксессуара
+                            .optional__item-btn(data-modal="#optional-modal") Подобрать
+                    .swiper-slide
+                        .optional__item
+                            img(src="img/accessory3.jpg", alt="extra equipment").optional__item-img
+                            h3.optional__item-title Название аксессуара
+                            .optional__item-btn(data-modal="#optional-modal") Подобрать
+                    .swiper-slide
+                        .optional__item
+                            img(src="img/accessory1.jpg", alt="extra equipment").optional__item-img
+                            h3.optional__item-title Название аксессуара
+                            .optional__item-btn(data-modal="#optional-modal") Подобрать
+                    .swiper-slide
+                        .optional__item
+                            img(src="img/accessory2.jpg", alt="extra equipment").optional__item-img
+                            h3.optional__item-title Название аксессуара
+                            .optional__item-btn(data-modal="#optional-modal") Подобрать
+
+.modal#optional-modal
+    ._dialog
+        ._content
+            .optional-modal
+                ._close-btn(data-role="modal-close")
+                    +svg('cross')
+                .optional__item-full
+                    h3.optional__item-title.-full Название аксессуара
+                    .optional__item-select
+                        .optional__item-select-btn-txt Тип блока
+                        input(type="hidden" value="")._input-select
+                        .optional__item-select-btn
+                            .info__question-wrap(data-pos="right" data-type="search")
+                                +svg('question', 'optional__question')
+                            +svg('down', 'optional__property-svg')
+                        .optional__item-dropdown
+                            .optional__item-dropdown-item(data-value="1") Тип блока 1
+                            .optional__item-dropdown-item(data-value="2") Тип блока 2
+                            .optional__item-dropdown-item(data-value="3") Тип блока 3
+                    .optional__item-select
+                        .optional__item-select-btn-txt Монтажная резьба
+                        input(type="hidden" value="")._input-select
+                        .optional__item-select-btn
+                            .info__question-wrap(data-pos="right" data-type="search")
+                                +svg('question', 'optional__question')
+                            +svg('down', 'optional__property-svg')
+                        .optional__item-dropdown
+                            .optional__item-dropdown-item(data-value="1") Монтажная резьба 1
+                            .optional__item-dropdown-item(data-value="2") Монтажная резьба 2
+                            .optional__item-dropdown-item(data-value="3") Монтажная резьба 3
+                    .optional__item-select
+                        .optional__item-select-btn-txt Тип блока
+                        input(type="hidden" value="")._input-select
+                        .optional__item-select-btn
+                            .info__question-wrap(data-pos="right" data-type="search")
+                                +svg('question', 'optional__question')
+                            +svg('down', 'optional__property-svg')
+                        .optional__item-dropdown
+                            .optional__item-dropdown-item(data-value="1") Тип блока 1
+                            .optional__item-dropdown-item(data-value="2") Тип блока 2
+                            .optional__item-dropdown-item(data-value="3") Тип блока 3
+                    .optional__item-select
+                        .optional__item-select-btn-txt Монтажная резьба
+                        input(type="hidden" value="")._input-select
+                        .optional__item-select-btn
+                            .info__question-wrap(data-pos="right" data-type="search")
+                                +svg('question', 'optional__question')
+                            +svg('down', 'optional__property-svg')
+                        .optional__item-dropdown
+                            .optional__item-dropdown-item(data-value="1") Монтажная резьба 1
+                            .optional__item-dropdown-item(data-value="2") Монтажная резьба 2
+                            .optional__item-dropdown-item(data-value="3") Монтажная резьба 3
+                    .optional__item-select
+                        .optional__item-select-btn-txt Тип блока
+                        input(type="hidden" value="")._input-select
+                        .optional__item-select-btn
+                            .info__question-wrap(data-pos="right" data-type="search")
+                                +svg('question', 'optional__question')
+                            +svg('down', 'optional__property-svg')
+                        .optional__item-dropdown
+                            .optional__item-dropdown-item(data-value="1") Тип блока 1
+                            .optional__item-dropdown-item(data-value="2") Тип блока 2
+                            .optional__item-dropdown-item(data-value="3") Тип блока 3
+                    .optional__item-select
+                        .optional__item-select-btn-txt Монтажная резьба
+                        input(type="hidden" value="")._input-select
+                        .optional__item-select-btn
+                            .info__question-wrap(data-pos="right" data-type="search")
+                                +svg('question', 'optional__question')
+                            +svg('down', 'optional__property-svg')
+                        .optional__item-dropdown
+                            .optional__item-dropdown-item(data-value="1") Монтажная резьба 1
+                            .optional__item-dropdown-item(data-value="2") Монтажная резьба 2
+                            .optional__item-dropdown-item(data-value="3") Монтажная резьба 3
+                    .optional__item-select
+                        .optional__item-select-btn-txt Тип блока
+                        input(type="hidden" value="")._input-select
+                        .optional__item-select-btn
+                            .info__question-wrap(data-pos="right" data-type="search")
+                                +svg('question', 'optional__question')
+                            +svg('down', 'optional__property-svg')
+                        .optional__item-dropdown
+                            .optional__item-dropdown-item(data-value="1") Тип блока 1
+                            .optional__item-dropdown-item(data-value="2") Тип блока 2
+                            .optional__item-dropdown-item(data-value="3") Тип блока 3
+                    .optional__item-select
+                        .optional__item-select-btn-txt Монтажная резьба
+                        input(type="hidden" value="")._input-select
+                        .optional__item-select-btn
+                            .info__question-wrap(data-pos="right" data-type="search")
+                                +svg('question', 'optional__question')
+                            +svg('down', 'optional__property-svg')
+                        .optional__item-dropdown
+                            .optional__item-dropdown-item(data-value="1") Монтажная резьба 1
+                            .optional__item-dropdown-item(data-value="2") Монтажная резьба 2
+                            .optional__item-dropdown-item(data-value="3") Монтажная резьба 3
+                    .optional__item-select
+                        .optional__item-select-btn-txt Тип блока
+                        input(type="hidden" value="")._input-select
+                        .optional__item-select-btn
+                            .info__question-wrap(data-pos="right" data-type="search")
+                                +svg('question', 'optional__question')
+                            +svg('down', 'optional__property-svg')
+                        .optional__item-dropdown
+                            .optional__item-dropdown-item(data-value="1") Тип блока 1
+                            .optional__item-dropdown-item(data-value="2") Тип блока 2
+                            .optional__item-dropdown-item(data-value="3") Тип блока 3
+                    .optional__item-select
+                        .optional__item-select-btn-txt Монтажная резьба
+                        input(type="hidden" value="")._input-select
+                        .optional__item-select-btn
+                            .info__question-wrap(data-pos="right" data-type="search")
+                                +svg('question', 'optional__question')
+                            +svg('down', 'optional__property-svg')
+                        .optional__item-dropdown
+                            .optional__item-dropdown-item(data-value="1") Монтажная резьба 1
+                            .optional__item-dropdown-item(data-value="2") Монтажная резьба 2
+                            .optional__item-dropdown-item(data-value="3") Монтажная резьба 3
+                    .optional__item-footer
+                        .optional__price-count
+                            .optional__price-count-number 1
+                            .optional__price-btn-group
+                                button.optional__price-btn-up
+                                    +svg('up-arrow-info', 'info__up-arrow-svg')
+                                button.optional__price-btn-down
+                                    +svg('up-arrow-info', 'info__down-arrow-svg')
+                        button.optional__item-footer-btn.btn заказать

@@ -1,0 +1,515 @@
+.props {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  box-shadow: 0 3px 10px rgba(11, 11, 11, 0.25);
+  transform: rotateX(0deg);
+  transform-origin: top;
+  transition: 0.3s;
+  &_product {
+    width: 300px;
+    &__body {
+      width: 300px;
+    }
+  }
+  &_signal {
+    width: 456px;
+    &__body {
+      width: 456px;
+    }
+  }
+  &_construct {
+    width: 355px;
+    &__body {
+      width: 355px;
+    }
+  }
+  &_pressure {
+    width: 365px;
+    &__body {
+      width: 365px;
+    }
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 35px;
+    transform: rotateZ(45deg);
+    width: 18px;
+    height: 18px;
+    background: #ffffff;
+  }
+  &_right {
+    left: initial;
+    right: -2px;
+    &::before {
+      left: initial;
+      right: 35px;
+    }
+    @media(max-width: 575px) {
+      left: initial;
+      right: initial;
+      &::before {
+        display: none;
+      }
+    }
+  }
+  @media(max-width: 575px) {
+    top:initial;
+    left: initial;
+    right: initial;
+    width: 100%;
+    box-shadow: none;
+    border: none;
+    border-top: 2px solid #dad8d7;
+    position: initial;
+
+    &::before {
+      display: none;
+    }
+  }
+  &__wrapper {
+    position: absolute;
+    width: 100%;
+    top: 68px;
+    left: -2px;
+    z-index: 1000;
+    perspective: 2000px;
+    perspective-origin: top;
+    height: 0;
+    border: none;
+    @media(max-width: 575px) {
+      position: initial;
+      height: max-content;
+      order: 1;
+      top: initial;
+      left: initial;
+      perspective: 1px;
+    }
+  }
+  &__close-svg {
+    position: absolute;
+    z-index: 70;
+    top: 18px;
+    right: 18px; 
+    width: 12px;
+    height: 12px;
+    fill: $txt-color;
+    cursor: pointer;
+  }
+  &__header {
+    display: flex;
+    padding: 25px;
+  }
+  &__btn {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.48px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: $span-color;
+    margin-right: 15px;
+    flex-shrink: 0;
+    cursor: pointer;
+    &_pressure {
+      margin-bottom: 27px;
+    }
+  }
+  &__body {
+    display: flex;
+    max-height: 420px;
+    @media(max-width: 575px) {
+      flex-direction: column;
+      max-height: initial;
+    }
+  }
+  &__col {
+    display: flex;
+    flex-direction: column;
+    padding: 0 25px 30px 25px;
+    flex-shrink: 0;
+    &:last-child {
+      border-left: 1px solid #e0e0e0;
+      @media(max-width: 575px) {
+        border-left: none;
+      }
+    }
+    &_pressure {
+      width: 100%;
+      align-items: center;
+      padding: 0 25px;
+    }
+    @media(max-width: 575px) {
+      padding: 0 7px 30px 7px;
+    }
+  }
+  &__col-title {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: $title-font;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 0 30px 0;
+    max-width: 300px;
+    &_sublist {
+      width: 100%;
+      max-width: 250px;
+      padding: 25px 0 0 0;
+      .props__list-item {
+        position: relative;
+        margin: 0 0 0 35px;
+        &::before {
+          position: absolute;
+          bottom: 50%;
+          left: -25px;
+          content: '';
+          width: 14px;
+          height: 44px;
+          border: 1px solid #e0e0e0;
+          border-top: transparent;
+          border-right: transparent;
+        }
+        &:first-child {
+          &::before {
+            height: 35px;
+          }
+        }
+      }
+      .props__checkbox-text {
+        width: 180px;
+      }
+    }
+  }
+  &__list-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    &:not(:first-child) {
+      margin-top: 16px;
+    }
+    &_sublist {
+      flex-wrap: wrap;
+    }
+  }
+  &__check-svg {
+    fill: #ffffff;
+  }
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  &__checkbox-real {
+    display: none;
+    &:checked {
+      +.props__checkbox-fake {
+        background-color: $btn-color;
+        border: 1px solid $btn-color;
+        .props__check-svg {
+          fill: #000000;
+        }
+      }
+    }
+  }
+  &__checkbox-fake {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: 0.2s;
+    &_checked {
+      background-color: $btn-color;
+      border: 1px solid $btn-color;
+      .props__check-svg {
+        fill: #000000;
+      }
+    }
+  }
+  &__checkbox-text {
+    margin: 0 5px;
+    font-size: 14px;
+    @media(max-width: 575px) {
+      width: 190px;
+    }
+  }
+  &__num {
+    font-size: 14px;
+    opacity: 0.5;
+  }
+  &__note {
+    margin: 0 5px;
+    font-size: 12px;
+    color: $span-color;
+  }
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    border-top: 1px solid #e0e0e0;
+    @media(max-width: 575px) {
+      justify-content: center;
+    }
+  }
+  &__footer-btn-find{
+    width: 145px;
+    height: 44px;
+    @media(max-width: 575px) {
+      width: 270px;
+    }
+  }
+  &__footer-btn {
+    cursor: pointer;
+  }
+  &__arrow {
+    width: 25px;
+    height: 16px;
+    fill: #000000;
+    @media(max-width: 575px) {
+      display: none;
+    }
+  }
+  &__inputs {
+    display: flex;
+    width: 100%;
+    margin-top: 40px;
+    justify-content: space-between;
+  }
+  &__input-wrap {
+    position: relative;
+    width: 140px;
+    height: 42px;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+    background-color: #fafafa;
+    margin-right: 5px;
+    @media(max-width: 575px) {
+      width: 125px;
+      margin: 10px 0 0 0;
+    }
+  }
+  &__placeholder {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: $txt-color;
+    top: 0;
+    height: 100%;
+    left: 6px;
+  }
+  &__input {
+    border: none;
+    background: transparent;
+    height: 100%;;
+    flex-grow: 1;
+    margin-left: 25px;
+    font-size: 12px;
+    color: rgba($txt-color, 0.5);
+    @media(max-width: 575px) {
+      width: 80%;
+    }
+  }
+  &__radio-btns-wrap {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 0;
+    width: 100%;
+    .radio__text {
+      @media(max-width: 575px) {
+        font-size: 12px;
+      }
+    }
+  }
+  &__radio-btns {
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+  }
+  &__radio-btn {
+    width: 25%;
+    flex-shrink: 0;
+  }
+  &__scroll {
+    max-height: 420px;
+    @media(max-width: 575px) {
+      max-height: initial;
+    }
+  }
+  &__tooltip {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: -180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: $span-color;
+    color: #ffffff;
+    width: 158px;
+    height: 70px;
+    border-radius: 4px;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      right: -8px;
+      width: 16px;
+      height: 16px;
+      background: $span-color;
+      transform: rotateZ(45deg);
+    }
+  }
+  &__tooltip-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  &__tooltip-btn {
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: underline;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  &__tooltip-title {
+    font-weight: 700;
+    font-size: 15px;
+    font-family: $title-font;
+    margin-right: 7px;
+  }
+  &__tooltip-text {
+    font-size: 13px;
+  }
+}
+.hidden {
+  display: none;
+}
+.hidden-props {
+  visibility: hidden;
+  transform: rotateX(-45deg);
+  opacity: 0;
+  @media(max-width: 575px) {
+    transform: rotateX(0deg);
+    display: none;
+  }
+}
+
+.irs--nutrition-calc {
+  margin-top: 45px;
+  width: 100%;
+  height: 37px;
+
+  .irs {
+    height: 100%;
+  }
+
+  .irs-line {
+    top: 5px;
+    height: 3px;
+    background: #eaeaea;
+    border-radius: 4px;
+  }
+
+  .irs-bar {
+    top: 5px;
+    height: 3px;
+    background: $span-color;
+  }
+
+  .irs-bar--single {
+    border-radius: 4px 0 0 4px;
+  }
+
+  .irs-shadow {
+    height: 1px;
+    bottom: 16px;
+    background-color: #e1e4e9;
+  }
+
+  // Бегунок
+  .irs-handle {
+    top: -1px;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background: $span-color;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  // Минимальное/максимальное значения
+  .irs-min,
+  .irs-max {
+    top: 22px;
+    color: $txt-color;
+    font-size: 10px;
+    visibility: visible !important;
+  }
+  
+  .irs-from,
+  .irs-to {
+    position: absolute;
+    top: -22px;
+    // left: 0 !important;
+    color: #000;
+    font-size: 12px;
+    font-weight: 600;
+    visibility: visible !important;
+  }
+  .irs-from {
+    opacity: 0;
+    left: 0 !important;
+  }
+  .irs-to {
+    opacity: 0;
+    left: initial !important;
+    right: 0 !important;
+  }
+
+  .irs-single {
+    left: 0 !important;
+    top: calc(100% - 16px);
+    right: 0;
+    text-align: center;
+    font-size: 0px;
+    text-transform: uppercase;
+    font-weight: 600;
+    &:after {
+      content: '';
+      
+    }
+    &_ccal {
+      font-size: 14px;
+      &:after {
+        content: ' ккал/день';
+        text-transform: uppercase;
+        color: #bababa;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .irs-grid-pol {
+    background-color: #e1e4e9;
+  }
+  .irs-grid-text {
+    color: #999;
+  }
+}
+

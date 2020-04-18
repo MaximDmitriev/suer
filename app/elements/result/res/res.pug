@@ -1,0 +1,209 @@
+-var props = ['Ориентировочные сроки изготовления:', 'Производитель:', 'Тип давления:', 'Выходной сигнал:', 'Электрическое присоединение:', 'Межповерочный интервал:', 'Наличие индикации:', 'Основная погрешность, %:', 'Конструкционное исполнение:', 'Исполнение и вид взрывозащиты:', 'Подключение к процессу:', 'Верхний предел измер. давления, кПа:', 'Материал мембраны:', 'Диапазон t°с измер. среды (процесса), °С:', 'Материал деталей контактирующих со средой:', 'Степень пылевлагозащиты IP:', 'Диапазон перенастройки:', 'Диапазон t окружающей среды, °С:'];
+-var rows = [['Кабельный ввод'], ['5 лет'], ['Без индикации'], ['0,15'], ['с разделительной мембраной'], ['Общепромышленное исполнение','Искробезопасная цепь Exia', 'Взрывонепроницаемая оболочка Ex'], ['М20х1,5 наруж. метрич.резьба', 'G½ наруж. трубная цилиндр. резьба,', 'G1 наруж. трубная цилиндр. резьба,', 'G1½ наруж. трубная цилиндр. резьба,', 'G2 наруж. трубная цилиндр. резьба,', '½MNPT наруж. конич. резьба', '1MNPT наруж. конич. резьба', '1½MNPT наруж. конич. резьба', '2MNPT наруж. конич. резьба', 'EN (DIN) Фланец Ду 25 - 100 мм', 'ANSI Фланец 1-4 дюйма'], ['0 ... 2500 кПа'], ['Титановый сплав ВТ-9'], ['-40 … 120 °С'], ['Сталь 12Х18Н10Т', 'Алюминий'], ['IP67'], ['200:1;', '100:1'], ['-51 … 85 °С']];
+.res.section
+    ._wrap.wrap
+        ._nav
+            ._nav-item Главная
+            ._nav-divider >
+            ._nav-item Каталог
+            ._nav-divider >
+            ._nav-item Разделы приборов
+            ._nav-divider.-active >
+            ._nav-item.-active Результаты подбора
+        h2._title.section__title Результаты подбора
+        ._buttons
+            ._selected-btn#sort
+                ._selected-btn-txt Сортировка
+                input(type="hidden" value="").res__selected-input
+                ._property-btn
+                    ._question-wrap(data-pos="right" data-type="search")
+                        +svg('question', 'selection__question')
+                    +svg('down', 'res__property-svg')
+                ._selected-dropdown#sortList
+                    ._selected-dropdown-item(data-value="1") Показать 1
+                    ._selected-dropdown-item(data-value="2") Показать 2
+                    ._selected-dropdown-item(data-value="3") Показать 3
+            button(data-show="true")._switch-btn.-hidden.btn
+                ._switch-btn-text Открыть исключенные
+                ._switch-btn-count 0
+                ._question-wrap(data-type="search")
+                    +svg('question', 'res__question-info')
+            button._btn-tune.btn.btn_contour-white
+                ._btn-tune-content.-active
+                    +svg('filter-btn', 'res__btn-tune-svg')
+                    ._btn-tune-text изменить параметры подбора
+                ._btn-tune-content
+                    +svg('cross', 'res__btn-tune-svg')
+                    ._btn-tune-text закрыть параметры подбора
+        include ../../common/selection/selection_result
+        //._fake-scroll(data-role="result-scroll")
+        //    ._fake-thumb
+        ._content
+            ._specs
+                ._info-block
+                    ._info-item
+                        ._info-key Найдено:
+                            ._question-wrap(data-type="search" data-tooltip-text='HART-протокол (Highway Addressable Remote Transducer - магистральный адресуемый удаленный преобразователь) [HART] является открытым стандартом на метод сетевого обмена, который включает в себя не только протокол взаимодействия устройств, но и требования к аппаратуре канала связи, поэтому устоявшийся термин протокол, означающий алгоритм взаимодействия устройств, применен здесь не совсем корректно. Стандарт HART был разработан в 1980 году фирмой Rosemount Inc., которая позже сделала его открытым. В настоящее время стандарт поддерживается международной организацией HART Communication Foundation (HCF), насчитывающей 190 членов (на декабрь 2006 г.). HART находит применение для связи контроллера с датчиками и измерительными преобразователями, электромагнитными клапанами, локальными контроллерами, для связи с искробезопасным оборудованием. Несмотря на свое низкое быстродействие (1200 бит/с) и ненадежный аналоговый способ передачи данных, а также появление более совершенных сетевых технологий, устройства с HART-протоколом разрабатываются до сих пор и объем этого сегмента рынка продолжает расти. Однако применение HART в России довольно ограничено, поскольку внедрение датчиков с HART-протоколом требует одновременного применения HART-совместимых контроллеров и специализированного программного обеспечения. Типовой областью применение HART являются достаточно дорогие интеллектуальные устройства (электромагнитные клапаны, датчики потока жидкости, радарные уровнемеры и т. п), а также взрывобезопасное оборудование, где низкая мощность HARTсигнала позволяет легко удовлетворить требованиям стандартов на искробезопасные электрические цепи.').-white
+                                +svg('question', 'res__question-info')
+                        ._info-value 53 результата
+                    ._info-item
+                        ._info-key Соответствует запросу:
+                            ._question-wrap(data-type="search").-white
+                                +svg('question', 'res__question-info')
+                        ._info-value 28 шт
+                    ._info-item.-border
+                        ._info-key Частично <br>соответствует:
+                            ._question-wrap(data-type="search").-white
+                                +svg('question', 'res__question-info')
+                        ._info-value 25 шт
+                    ._info-item
+                        ._info-key На складе:
+                            ._question-wrap(data-type="search").-white
+                                +svg('question', 'res__question-info')
+                        ._info-value 5 шт
+                    ._info-item.-border
+                        ._info-key Снято с производства:
+                            ._question-wrap(data-type="search").-white
+                                +svg('question', 'res__question-info')
+                        ._info-value нет
+                    ._info-item
+                        ._info-key Добавлено в сравнение
+                            ._question-wrap(data-type="search").-white
+                                +svg('question', 'res__question-info')
+                        ._info-value 3 шт
+                ._props-block
+                    -var index = 1;
+                    each item in props
+                        ._props-item(data-row=index)
+                            ._props-text=item
+                            ._question-wrap(data-type="search")
+                                +svg('question', 'res__question-info')
+                        -index++;
+            ._container-pinned(data-name="wrapper")
+            ._container(data-name="wrapper" data-role="result-scroll")
+                ._card(data-state="unpinned")
+                    ._card-top
+                        ._card-labels
+                            ._card-label.-danger Снят с производства
+                        ._card-view
+                            ._card-img-wrap
+                                img(src="img/Cerabar.jpg", alt="device")._card-img
+                            ._card-icons
+                                ._card-info.-ok
+                                    | 99%
+                                    ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                        +svg('question', 'res__question-info')
+                                ._card-icon(data-action="pin" data-role="small-tooltip" data-tooltip-text="Закрепить")
+                                    +svg('push-pin', 'alike__pin-svg')
+                                ._card-icon(data-action="hide" data-role="small-tooltip" data-tooltip-text="Скрыть")
+                                    +svg('close', 'alike__close-svg')
+                                ._card-icon(data-action="graph" data-role="small-tooltip" data-tooltip-text="К сравнению")
+                                    +svg('graph')
+                                ._card-icon(data-action="list" data-role="small-tooltip" data-tooltip-text="В мой список")
+                                    +svg('docs')
+                        ._card-title Cerabar M PMP55
+                        ._card-price
+                            | Цена:
+                            span._card-price-value По запросу
+                        ._card-link-btn Подобрать аналог
+                        ._card-btns
+                            button._card-btn.btn.btn_contour подробнее о товаре
+                            button._card-btn-cart.btn
+                                +svg('cart', 'alike__cart-svg')
+                    ._card-table
+                        ._card-row(data-row="1")
+                            ._card-row-item.-bold 12 дней
+                        ._card-row.-grey(data-row="2")
+                            ._card-row-item.-bold Yokogawa
+                        ._card-row.-grey(data-row="3")
+                            ._card-row-item.-bold Абсолютное
+                        ._card-row.-grey(data-row="4")
+                            ._card-row-item.-bold Foundation Fieldbus
+                            ._card-row-item 4-20мА/HART
+                            ._card-row-item 4-20мА/HART
+                        -var i = 5;
+                        -var cl = '';
+                        each row in rows
+                            -if (i < 14) cl = 'res__card-row_grey';
+                            -else cl = '';
+                            ._card-row(class=cl data-row=i)
+                                -i++;
+                                -var k = 0;
+                                -var mod = '';
+                                each val in row
+                                    -if (k == 0) mod = 'res__card-row-item_bold';
+                                    -else mod = '';
+                                    -k++;
+                                    ._card-row-item(class=mod)=val
+                ._card(data-state="unpinned")
+                    ._card-top
+                        ._card-labels
+                            ._card-label.-danger Снят с производства
+                        ._card-view
+                            ._card-img-wrap
+                                img(src="img/Cerabar.jpg", alt="device")._card-img
+                            ._card-icons
+                                ._card-info.-ok
+                                    | 99%
+                                    ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                        +svg('question', 'res__question-info')
+                                ._card-icon(data-action="pin" data-role="small-tooltip" data-tooltip-text="Закрепить")
+                                    +svg('push-pin', 'alike__pin-svg')
+                                ._card-icon(data-action="hide" data-role="small-tooltip" data-tooltip-text="Скрыть")
+                                    +svg('close', 'alike__close-svg')
+                                ._card-icon(data-action="graph" data-role="small-tooltip" data-tooltip-text="К сравнению")
+                                    +svg('graph')
+                                ._card-icon(data-action="list" data-role="small-tooltip" data-tooltip-text="В мой список")
+                                    +svg('docs')
+                        ._card-title Cerabar M PMP55
+                        ._card-price
+                            | Цена:
+                            span._card-price-value По запросу
+                        ._card-link-btn Подобрать аналог
+                        ._card-btns
+                            button._card-btn.btn.btn_contour подробнее о товаре
+                            button._card-btn-cart.btn
+                                +svg('cart', 'alike__cart-svg')
+                    ._card-table
+                        ._card-row(data-row="1")
+                            ._card-row-item.-bold 12 дней
+                        ._card-row.-grey(data-row="2")
+                            ._card-row-item.-bold Yokogawa
+
+                        ._card-row.-grey(data-row="3")
+                            ._card-row-item.-bold Абсолютное
+
+
+                        ._card-row.-grey(data-row="4")
+                            ._card-row-group
+                                ._card-row-group-indicator
+                                ._card-row-item.-title.-bold Гарантийный срок эксплуатации
+                                    +svg('res-card-arrow')
+                                ._card-row-group-list
+                                    ._card-row-item  не более 12 месяцев со дня изготовления.
+                                        +svg('res-card-arrow-right')
+                                    ._card-row-item 4-20мА/HART
+                                        +svg('res-card-arrow-right')
+                            ._card-row-group
+                                ._card-row-group-indicator
+                                ._card-row-item.-title.-bold Hart
+                                    +svg('res-card-arrow')
+                                ._card-row-group-list
+                                    ._card-row-item 5 версия
+                                        +svg('res-card-arrow-right')
+                                    ._card-row-item 7 версия
+                                        +svg('res-card-arrow-right')
+                        -var i = 5;
+                        -var cl = '';
+                        each row in rows
+                            -if (i < 14) cl = 'res__card-row_grey';
+                            -else cl = '';
+                            ._card-row(class=cl data-row=i)
+                                -i++;
+                                -var k = 0;
+                                -var mod = '';
+                                each val in row
+                                    -if (k == 0) mod = 'res__card-row-item_bold';
+                                    -else mod = '';
+                                    -k++;
+                                    ._card-row-item(class=mod)=val

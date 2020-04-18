@@ -1,0 +1,15 @@
+.text-block {
+  padding: 70px 0 90px 0;
+  &__texts {
+    width: 820px;
+  }
+  &__text {
+    font-size: 15px;
+    line-height: 23px;
+    color: rgba($txt-color, 0.8);
+    margin-top: 20px;
+    // &:not(:first-child) {
+    //   margin-top: 15px;
+    // }
+  }
+}

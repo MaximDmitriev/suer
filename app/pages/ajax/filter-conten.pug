@@ -1,0 +1,288 @@
+include ../../elements/common/head/head
+.selection__content-wrap
+    .selection__content-view.hidden
+        img(src="img/visual.jpg", alt="visual").selection__content-img.transparent
+    .selection__content-desc
+        .selection__options-title Выберите тип измеряемого давления:
+            span.selection__question-wrap(data-pos="right" data-type="pressure")
+                +svg('question', 'selection__question')
+            .selection__options-addtext.hidden Свойства можно менять местами
+        .selection__options-wrap
+            .selection__option
+                label(for="selection-check-1" tabindex="1").selection__checkbox
+                    input(type="checkbox" name="selection-check")#selection-check-1.selection__checkbox-real
+                    .selection__checkbox-fake
+                        +svg('checked', 'selection__check-svg')
+                    .selection__checkbox-text Избыточное
+            .selection__option
+                label(for="selection-check-2" tabindex="2").selection__checkbox
+                    input(type="checkbox" name="selection-check")#selection-check-2.selection__checkbox-real
+                    .selection__checkbox-fake
+                        +svg('checked', 'selection__check-svg')
+                    .selection__checkbox-text Абсолютное
+            .selection__option
+                label(for="selection-check-3").selection__checkbox
+                    input(type="checkbox" name="selection-check")#selection-check-3.selection__checkbox-real
+                    .selection__checkbox-fake
+                        +svg('checked', 'selection__check-svg')
+                    .selection__checkbox-text Дифференциальное
+            .selection__option
+                label(for="selection-check-4").selection__checkbox
+                    input(type="checkbox" name="selection-check")#selection-check-4.selection__checkbox-real
+                    .selection__checkbox-fake
+                        +svg('checked', 'selection__check-svg')
+                    .selection__checkbox-text Разряжение
+            .selection__option
+                label(for="selection-check-5").selection__checkbox
+                    input(type="checkbox" name="selection-check")#selection-check-5.selection__checkbox-real
+                    .selection__checkbox-fake
+                        +svg('checked', 'selection__check-svg')
+                    .selection__checkbox-text Гидростатическое
+            .selection__option
+                label(for="selection-check-6").selection__checkbox
+                    input(type="checkbox" name="selection-check")#selection-check-6.selection__checkbox-real
+                    .selection__checkbox-fake
+                        +svg('checked', 'selection__check-svg')
+                    .selection__checkbox-text Дифференциальное
+            .selection__option
+                label(for="selection-check-7").selection__checkbox
+                    input(type="checkbox" name="selection-check")#selection-check-7.selection__checkbox-real
+                    .selection__checkbox-fake
+                        +svg('checked', 'selection__check-svg')
+                    .selection__checkbox-text Разряжение
+        .selection__props
+            .selection__props-wrap#sortable
+                .selection__property-wrap
+                    .selection__property
+                        include ../../elements/index/props/props
+                        .selection__property-label 1
+                            +svg('tuning', 'selection__property-label-svg')
+                        .selection__property-title Подключение<br> к процессу
+                            span.selection__property-num.hidden  (2)
+                        .selection__property-btn
+                            .selection__question-wrap(data-pos="right" data-type="search")
+                                +svg('question', 'selection__question')
+                        +svg('down', 'selection__property-svg')
+                .selection__property-wrap
+                    .selection__property
+                        include ../../elements/index/props/props-product
+                        .selection__property-label 2
+                            +svg('tuning', 'selection__property-label-svg')
+                        .selection__property-title Производитель
+                            span.selection__property-num.hidden  (2)
+                        .selection__property-btn
+                            .selection__question-wrap(data-pos="right" data-type="search")
+                                +svg('question', 'selection__question')
+                        +svg('down', 'selection__property-svg')
+                .selection__property-wrap
+                    .selection__property
+                        include ../../elements/index/props/props-construct
+                        .selection__property-label 3
+                            +svg('tuning', 'selection__property-label-svg')
+                        .selection__property-title Конструкционное<br>исполнение
+                            span.selection__property-num.hidden  (2)
+                        .selection__property-btn
+                            .selection__question-wrap(data-pos="right" data-type="search")
+                                +svg('question', 'selection__question')
+                        +svg('down', 'selection__property-svg')
+                .selection__property-wrap
+                    .selection__property
+                        .selection__property-label 4
+                            +svg('tuning', 'selection__property-label-svg')
+                        .selection__property-title Основная<br>погрешность
+                            span.selection__property-num.hidden  (2)
+                        .selection__property-btn
+                            .selection__question-wrap(data-pos="right" data-type="search")
+                                +svg('question', 'selection__question')
+                            +svg('down', 'selection__property-svg')
+                .selection__property-wrap
+                    .selection__property
+                        .selection__property-label 5
+                            +svg('tuning', 'selection__property-label-svg')
+                        .selection__property-title Выходной сигнал
+                            span.selection__property-num.hidden  (2)
+                        .selection__property-btn
+                            .selection__question-wrap(data-pos="right" data-type="search")
+                                +svg('question', 'selection__question')
+                            +svg('down', 'selection__property-svg')
+                .selection__property-wrap
+                    .selection__property
+                        .selection__property-label 6
+                            +svg('tuning', 'selection__property-label-svg')
+                        .selection__property-title Исполнение и вид<br>взрывозащиты
+                            span.selection__property-num.hidden  (2)
+                        .selection__property-btn
+                            .selection__question-wrap(data-pos="right" data-type="search")
+                                +svg('question', 'selection__question')
+                            +svg('down', 'selection__property-svg')
+                .selection__property-wrap
+                    .selection__property
+                        .selection__property-label 7
+                            +svg('tuning', 'selection__property-label-svg')
+                        .selection__property-title Электрическое<br> присоединение
+                            span.selection__property-num.hidden  (2)
+                        .selection__property-btn
+                            .selection__question-wrap(data-pos="right" data-type="search")
+                                +svg('question', 'selection__question')
+                            +svg('down', 'selection__property-svg')
+                .selection__property-wrap
+                    .selection__property
+                        include ../../elements/index/props/props-pressure
+                        .selection__property-label 8
+                            +svg('tuning', 'selection__property-label-svg')
+                        .selection__property-title Верхний предел<br>измерения давления
+                            span.selection__property-num.hidden  (2)
+                        .selection__property-btn
+                            .selection__question-wrap(data-pos="right" data-type="search")
+                                +svg('question', 'selection__question')
+                        +svg('down', 'selection__property-svg')
+                .selection__props-more-wrap
+                    .selection__props-more
+                        .selection__question-wrap(data-pos="left" data-type="search")
+                            +svg('question', 'selection__question')
+                        .selection__props-more-text Показать дополнительные свойства
+                        .selection__props-more-btn
+                            +svg('down-arrow', 'selection__props-more-svg')
+                .selection__property-wrap
+                    .selection__property
+                        .selection__property-label 9
+                            +svg('tuning', 'selection__property-label-svg')
+                        .selection__property-title Межповерочный<br>интервал
+                            span.selection__property-num.hidden  (2)
+                        .selection__property-btn
+                            .selection__question-wrap(data-pos="right" data-type="search")
+                                +svg('question', 'selection__question')
+                            +svg('down', 'selection__property-svg')
+                .selection__property-wrap
+                    .selection__property
+                        .selection__property-label 10
+                            +svg('tuning', 'selection__property-label-svg')
+                        .selection__property-title Наличие индикации
+                            span.selection__property-num.hidden  (2)
+                        .selection__property-btn
+                            .selection__question-wrap(data-pos="right" data-type="search")
+                                +svg('question', 'selection__question')
+                            +svg('down', 'selection__property-svg')
+                .selection__property-wrap
+                    .selection__property
+                        .selection__property-label 11
+                            +svg('tuning', 'selection__property-label-svg')
+                        .selection__property-title Диапазон t<br>окружающей среды, °С
+                            span.selection__property-num.hidden  (2)
+                        .selection__property-btn
+                            .selection__question-wrap(data-pos="right" data-type="search")
+                                +svg('question', 'selection__question')
+                            +svg('down', 'selection__property-svg')
+                .selection__property-wrap
+                    .selection__property
+                        .selection__property-label 12
+                            +svg('tuning', 'selection__property-label-svg')
+                        .selection__property-title Диапазон t измеряемой<br>среды  (процесса)
+                            span.selection__property-num.hidden  (2)
+                        .selection__property-btn
+                            .selection__question-wrap(data-pos="right" data-type="search")
+                                +svg('question', 'selection__question')
+                            +svg('down', 'selection__property-svg')
+                .selection__property-wrap
+                    .selection__property
+                        .selection__property-label 13
+                            +svg('tuning', 'selection__property-label-svg')
+                        .selection__property-title Материал мембраны
+                            span.selection__property-num.hidden  (2)
+                        .selection__property-btn
+                            .selection__question-wrap(data-pos="right" data-type="search")
+                                +svg('question', 'selection__question')
+                            +svg('down', 'selection__property-svg')
+                .selection__property-wrap
+                    .selection__property
+                        .selection__property-label 14
+                            +svg('tuning', 'selection__property-label-svg')
+                        .selection__property-title Материал деталей<br>контактирующих<br>со средой
+                            span.selection__property-num.hidden  (2)
+                        .selection__property-btn
+                            .selection__question-wrap(data-pos="right" data-type="search")
+                                +svg('question', 'selection__question')
+                            +svg('down', 'selection__property-svg')
+                .selection__property-wrap
+                    .selection__property
+                        .selection__property-label 15
+                            +svg('tuning', 'selection__property-label-svg')
+                        .selection__property-title Сертификат надежности<br>для систем ПАЗ, SIL
+                            span.selection__property-num.hidden  (2)
+                        .selection__property-btn
+                            .selection__question-wrap(data-pos="right" data-type="search")
+                                +svg('question', 'selection__question')
+                            +svg('down', 'selection__property-svg')
+                .selection__property-wrap
+                    .selection__property
+                        .selection__property-label 16
+                            +svg('tuning', 'selection__property-label-svg')
+                        .selection__property-title Степень<br>пылевлагозащиты IP
+                            span.selection__property-num.hidden  (2)
+                        .selection__property-btn
+                            .selection__question-wrap(data-pos="right" data-type="search")
+                                +svg('question', 'selection__question')
+                            +svg('down', 'selection__property-svg')
+                .selection__property-wrap
+                    .selection__property
+                        .selection__property-label 17
+                            +svg('tuning', 'selection__property-label-svg')
+                        .selection__property-title Диапазон<br>перенастройки
+                            span.selection__property-num.hidden  (2)
+                        .selection__property-btn
+                            .selection__question-wrap(data-pos="right" data-type="search")
+                                +svg('question', 'selection__question')
+                            +svg('down', 'selection__property-svg')
+                .selection__property-wrap
+                    .selection__property
+                        .selection__property-label 18
+                            +svg('tuning', 'selection__property-label-svg')
+                        .selection__property-title Материал корпуса
+                            span.selection__property-num.hidden  (2)
+                        .selection__property-btn
+                            .selection__question-wrap(data-pos="right" data-type="search")
+                                +svg('question', 'selection__question')
+                            +svg('down', 'selection__property-svg')
+                .selection__property-wrap
+                    .selection__property
+                        .selection__property-label 19
+                            +svg('tuning', 'selection__property-label-svg')
+                        .selection__property-title Заполняющая жидкость
+                            span.selection__property-num.hidden  (2)
+                        .selection__property-btn
+                            .selection__question-wrap(data-pos="right" data-type="search")
+                                +svg('question', 'selection__question')
+                            +svg('down', 'selection__property-svg')
+                .selection__property-wrap
+                    .selection__property
+                        .selection__property-label 20
+                            +svg('tuning', 'selection__property-label-svg')
+                        .selection__property-title Подключение<br>к процессу
+                            span.selection__property-num.hidden  (2)
+                        .selection__property-btn
+                            .selection__question-wrap(data-pos="right" data-type="search")
+                                +svg('question', 'selection__question')
+                            +svg('down', 'selection__property-svg')
+                .selection__property-wrap
+                    .selection__property
+                        .selection__property-label 21
+                            +svg('tuning', 'selection__property-label-svg')
+                        .selection__property-title Цена
+                        label(for="select-from").selection__property-input-wrap
+                            input(type="text" placeholder="1000" id="select-from").selection__property-input
+                            .selection__property-placeholder От
+                        label(for="select-from").selection__property-input-wrap
+                            input(type="text" placeholder="250 000" id="select-from").selection__property-input
+                            .selection__property-placeholder До
+                .selection__radio-wrap
+                    .selection__selected-btn#selectCity
+                        .selection__selected-btn-txt Показать все свойства
+                        input(type="hidden" value="").selection__selected-input
+                        .selection__property-btn
+                            .selection__question-wrap(data-pos="right" data-type="search")
+                                +svg('question', 'selection__question')
+                            +svg('down', 'selection__property-svg')
+                        .selection__selected-dropdown#dropCity
+                            .selection__selected-dropdown-item(data-value="1") Показать все свойства
+                            .selection__selected-dropdown-item(data-value="2") Показать выбранные
+                            .selection__selected-dropdown-item(data-value="3") Показать пропущенные параметры

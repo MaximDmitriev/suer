@@ -1,0 +1,25 @@
+$root: '.banner';
+.banner_black {
+
+  svg {
+    fill: #000;
+  }
+  #{$root} {
+    &__slide-title {
+      color: #000;
+    }
+    &__slide-desc {
+      color: #000;
+    }
+  }
+  .banner-ctrl__item-title {
+    color: #000;
+  }
+  .btn_contour-white {
+    color: #000;
+    border-color: #000;
+  }
+  .banner-ctrl__item:not(:first-child) {
+    border-left: 1px solid rgba(#000, .2);
+  }
+}

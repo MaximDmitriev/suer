@@ -1,0 +1,55 @@
+.header.-card.section
+    ._wrap.wrap
+        ._logo
+            +svg('logo')
+        ._lang-box
+            ._lang.-active Ru
+            a(href="#")._lang En
+        ._cart
+            ._cart-icon
+                +svg('cart')
+                ._cart-icon-count 2
+            ._cart-info
+                ._cart-title Сумма заказа:
+                ._cart-price 25 749 р.
+        ._tools
+            ._tool
+                ._tool-btn(data-role="comparison")
+                    +svg('comparison')
+                    ._tool-count 5
+                include ../../index/comparison/comparison
+            ._tool(data-role="small-tooltip" data-tooltip-text="Список сравнения")
+                +svg('list')
+            ._tool(data-modal="#search" data-role="small-tooltip" data-tooltip-text="Поиск")
+                +svg('search')
+            ._tool.-auth(data-role="small-tooltip" data-tooltip-text="Авторизация")
+                +svg('user' , 'header__tool-user')
+        ._contacts
+            ._contacts-nav-btn(data-contacts-nav="prev")
+                +svg('angle-left')
+            .swiper-container(data-slider="contacts")
+                .swiper-wrapper
+                    .swiper-slide
+                        .header__contacts-line
+                            +svg('phone', 'header__phone-icon')
+                            .header__contacts-phone +7 (383) 299-19-13
+                        .header__contacts-line
+                            +svg('map-marker', 'header__map-marker-icon')
+                            .header__contacts-address г. Новосибирск
+                    .swiper-slide
+                        .header__contacts-line
+                            +svg('phone', 'header__phone-icon')
+                            .header__contacts-phone +7 (495) 299-19-13
+                        .header__contacts-line
+                            +svg('map-marker', 'header__map-marker-icon')
+                            .header__contacts-address г. Москва
+            ._contacts-nav-btn(data-contacts-nav="next")
+                +svg('angle-right')
+        nav._menu
+            a(href="")._menu-link О нас
+            a(href="")._menu-link Подбор приборов
+            a(href="")._menu-link Каталог
+            a(href="")._menu-link Готовые решения
+            a(href="")._menu-link Полезная информация
+            a(href="")._menu-link Контакты
+            a(href="")._menu-link.-enter Войти

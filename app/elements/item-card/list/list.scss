@@ -1,0 +1,39 @@
+.list {
+  padding: 10px 0;
+  &__wrap {
+    border: 1px solid #ededed;
+    padding: 0;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px 40px;
+    background-color: #f5f5f5;
+  }
+  &__title {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: $title-font;
+    color: $txt-color;
+  }
+  &__footer {
+    display: flex;
+    width: 100%;
+    padding: 30px 40px;
+  }
+  &__stock-btn {
+    width: 280px;
+    margin: 0 0 0 10px;
+    color: $span-color;
+    border-color: $span-color;
+    &:hover {
+      color: #fff;
+      border-color: $btn-color;
+    }
+  }
+  &__up-svg {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,33 @@
+.social-list {
+  display: flex;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    &_whatsapp {
+      background: $wa-color;
+    }
+    &_viber {
+      background: $vb-color;
+    }
+    &_telegram {
+      background: $tg-color;
+    }
+    &_vk {
+      background: $vk-color;
+    }
+    &_facebook {
+      background: $fb-color;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+    &:not(:first-child) {
+      margin-left: 2px;
+    }
+  }
+}

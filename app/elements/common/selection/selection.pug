@@ -1,0 +1,257 @@
+.selection
+    ._filter.wow.fadeIn(data-wow-duration="1s")
+        ._subtitle 
+            |Давление 
+            +svg('close', 'selection__close-svg')
+        ._search
+            ._search-type 
+                ._search-type-text Тип
+                ._question-wrap(data-pos="left" data-type="type")
+                    +svg('question', 'selection__question selection__question_white')
+            ._search-wrap
+                ._search-bar
+                    ._search-input-item
+                        ._search-input-box
+                            ._question-wrap(data-pos="left" data-type="search")
+                                +svg('question', 'selection__question')
+                        input(type="text" placeholder="Поиск параметров")._search-input
+                        +svg('search', 'selection__input-svg')
+                    button._search-btn.btn.btn_contour-white
+                        +icon('filters', 'selection__btn-icon')
+                        | Визуализация  фильтра
+                        ._question-wrap(data-pos="right" data-type="filter")
+                            +svg('question', 'selection__question selection__question_white selection__question_nohover')
+                ._nav.hidden
+                    ._nav-container.wrap
+                        ._nav-btn.-prev(data-search-nav="prev")
+                            +svg('arrow-left')
+                        ._nav-btn.-next(data-search-nav="next")
+                            +svg('arrow-right')
+                ._search-select.hidden
+                    ._select-title Найдено: 7 свойств
+                    .swiper-container(data-slider="search-slider")
+                        .swiper-wrapper
+                            .swiper-slide
+                                .selection__property
+                                    .selection__property-label 1
+                                    .selection__property-title Тип измеряемого<br>давления
+                                        span._property-num.hidden  (2)
+                                    .selection__property-btn
+                                        +svg('question', 'selection__question')
+                                        +svg('down', 'selection__property-svg')
+                            .swiper-slide
+                                .selection__property
+                                    .selection__property-label 2
+                                    .selection__property-title Тип измеряемого<br>давления
+                                        span._property-num.hidden  (2)
+                                    .selection__property-btn
+                                        +svg('question', 'selection__question')
+                                        +svg('down', 'selection__property-svg')
+                            .swiper-slide
+                                .selection__property
+                                    .selection__property-label 3
+                                    .selection__property-title Тип измеряемого<br>давления
+                                        span._property-num.hidden  (2)
+                                    .selection__property-btn
+                                        +svg('question', 'selection__question')
+                                        +svg('down', 'selection__property-svg')
+                            .swiper-slide
+                                .selection__property
+                                    .selection__property-label 4
+                                    .selection__property-title Тип измеряемого<br>давления
+                                        span._property-num.hidden  (2)
+                                    .selection__property-btn
+                                        +svg('question', 'selection__question')
+                                        +svg('down', 'selection__property-svg')
+                            .swiper-slide
+                                .selection__property
+                                    .selection__property-label 5
+                                    .selection__property-title Тип измеряемого<br>давления
+                                        span._property-num.hidden  (2)
+                                    .selection__property-btn
+                                        +svg('question', 'selection__question')
+                                        +svg('down', 'selection__property-svg')
+                            .swiper-slide
+                                .selection__property
+                                    .selection__property-label 6
+                                    .selection__property-title Тип измеряемого<br>давления
+                                        span._property-num.hidden  (2)
+                                    .selection__property-btn
+                                        +svg('question', 'selection__question')
+                                        +svg('down', 'selection__property-svg')
+                            .swiper-slide
+                                .selection__property
+                                    .selection__property-label 7
+                                    .selection__property-title Тип измеряемого<br>давления
+                                        span._property-num.hidden  (2)
+                                    .selection__property-btn
+                                        +svg('question', 'selection__question')
+                                        +svg('down', 'selection__property-svg')
+                            .swiper-slide
+                                .selection__property
+                                    .selection__property-label 8
+                                    .selection__property-title Тип измеряемого<br>давления
+                                        span._property-num.hidden  (2)
+                                    .selection__property-btn
+                                        +svg('question', 'selection__question')
+                                        +svg('down', 'selection__property-svg')
+                    ._select-btn
+                        |Закрыть
+                        +svg('close', 'selection__select-svg')
+        ._body
+            ._mouse-wrap
+                +svg('mouse')
+                ._mouse-arrows
+                    +svg('down-arrow', 'selection__mouse-arrow')
+                    +svg('down-arrow', 'selection__mouse-arrow')
+                    +svg('down-arrow', 'selection__mouse-arrow')
+            ._body-btn показать все
+            ._controls-wrap
+                ._control.-active#preview
+                    ._control-view
+                        img(src="img/pressure-filter.png", alt="pressure")._control-img
+                    ._control-text Давление
+                    +svg('contr-arrow', 'selection__control-svg')
+                ._controls.full.scrollbar-inner.scrollbar-inner_white
+                    ._control(style="display: none")
+                        ._control-view
+                            img(src="img/pressure-filter.png", alt="pressure")._control-img
+                        ._control-text Давление
+                        +svg('contr-arrow', 'selection__control-svg')
+                    ._control
+                        ._control-view
+                            img(src="img/consumption-filter.png", alt="consumption")._control-img
+                        ._control-text Расход
+                        +svg('contr-arrow', 'selection__control-svg')
+                    ._control
+                        ._control-view
+                            img(src="img/temperature-filter.png", alt="temperature")._control-img
+                        ._control-text Температура
+                        +svg('contr-arrow', 'selection__control-svg')
+                    ._control
+                        ._control-view
+                            img(src="img/level-filter.png", alt="level")._control-img
+                        ._control-text Уровень
+                        +svg('contr-arrow', 'selection__control-svg')
+                    ._control
+                        ._control-view
+                            img(src="img/func-filter.png", alt="functional")._control-img
+                        ._control-text Функционал. <br>аппаратура
+                        +svg('contr-arrow', 'selection__control-svg')
+                    ._control
+                        ._control-view
+                            img(src="img/analytics-filter.png", alt="analitycs")._control-img
+                        ._control-text Аналитика
+                        +svg('contr-arrow', 'selection__control-svg')
+                    ._control
+                        ._control-view
+                            img(src="img/comunication-filter.png", alt="analitycs")._control-img
+                        ._control-text Средства <br>коммуникации
+                        +svg('contr-arrow', 'selection__control-svg')
+                    ._control
+                        ._control-view
+                            img(src="img/valves-filter.png", alt="valves")._control-img
+                        ._control-text Клапаны, <br>Регуляторы
+                        +svg('contr-arrow', 'selection__control-svg')
+                    ._control
+                        ._control-view
+                            img(src="img/asutp-filter.png", alt="astup")._control-img
+                        ._control-text АСУТП
+                        +svg('contr-arrow', 'selection__control-svg')
+                    ._control
+                        ._control-view
+                            img(src="img/measure-filter.png", alt="measure")._control-img
+                        ._control-text Системы <br>измерения
+                        +svg('contr-arrow', 'selection__control-svg')
+            ._content
+
+                ._analytics
+                    button._analytics-btn.btn.btn_contour-white
+                        +svg('segment')
+                        ._btn-tune-text Анализировать
+                        ._question-wrap(data-pos="right" data-type="search")
+                            +svg('question', 'selection__question selection__question_nohover')
+                    input(type="text" placeholder="СУЭР-10-ДИ-2160м-02-МП3-t12 (-60*С)-010-(0...16МПа)-42")._analytics-input
+                ._btn-group
+                    button._btn-tune.btn.btn_contour-white
+                        +svg('filter-btn', 'selection__btn-tune-svg')
+                        ._btn-tune-text настроить фильтр
+                        ._question-wrap(data-pos="right" data-type="search")
+                            +svg('question', 'selection__question selection__question_nohover')
+                    button._btn-clear.btn.btn_contour очистить фильтр
+                    button._btn-show.btn Показать 53 прибора
+                        +svg('arrow-right', 'selection__btn-show-svg')
+                    ._tunes.hidden
+                        ._tune
+                            ._tune-title 
+                                ._tune-title-text Ограничить % совпадений
+                                ._question-wrap(data-pos="left" data-type="search")
+                                    +svg('question', 'selection__question')
+                            ._tune-input-wrap
+                                input(type="text" placeholder="100")._tune-input
+                                ._tune-placeholder %
+                        ._tune
+                            ._tune-title 
+                                ._tune-title-text Название фильтра
+                                ._question-wrap(data-pos="left" data-type="search")
+                                    +svg('question', 'selection__question')
+                            ._tune-input-wrap.-long
+                                input(type="text" placeholder="Новый фильтр")._tune-input.-big
+                                button._tune-btn сохранить фильтр
+            ._params.hidden
+                ._params-wrap.scrollbar-inner
+                    ._params-item
+                        ._params-view
+                            img(src="img/pressure-filter.png", alt="pressure")._params-img
+                        ._params-text Давление
+                    ._params-item
+                        ._params-view
+                            img(src="img/consumption-filter.png", alt="consumption")._params-img
+                        ._params-text Расход
+                    ._params-item
+                        ._params-view
+                            img(src="img/temperature-filter.png", alt="temperature")._params-img
+                        ._params-text Температура
+                    ._params-item
+                        ._params-view
+                            img(src="img/level-filter.png", alt="level")._params-img
+                        ._params-text Уровень
+                    ._params-item
+                        ._params-view
+                            img(src="img/func-filter.png", alt="functional")._params-img
+                        ._params-text Функциональная<br>аппаратура
+                    ._params-item
+                        ._params-view
+                            img(src="img/comunication-filter.png", alt="comunications")._params-img
+                        ._params-text Средство<br>коммуникации
+                    ._params-item
+                        ._params-view
+                            img(src="img/valves-filter.png", alt="valves")._params-img
+                        ._params-text Клапаны,<br>регуляторы
+                    ._params-item
+                        ._params-view
+                            img(src="img/analytics-filter.png", alt="analytics")._params-img
+                        ._params-text Аналитика
+                    ._params-item
+                        ._params-view
+                            img(src="img/asutp-filter.png", alt="asutp")._params-img
+                        ._params-text АСУТП
+                    ._params-item
+                        ._params-view
+                            img(src="img/measure-filter.png", alt="measure")._params-img
+                        ._params-text Системы<br>измерения
+                    ._params-item
+                        ._params-view
+                            img(src="img/vibro-filter.png", alt="vibro")._params-img
+                        ._params-text Вибро-<br>диагностика
+                    ._params-item
+                        ._params-view
+                            img(src="img/config-filter.png", alt="config")._params-img
+                        ._params-text Конфигуратор
+                    ._params-item
+                        ._params-view
+                            +svg('add')
+                        ._params-text Добавить<br>свойство
+                ._params-btn
+                    +svg('close', 'selection__params-svg')
+                    |скрыть все

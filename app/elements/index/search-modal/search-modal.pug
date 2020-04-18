@@ -1,0 +1,12 @@
+.modal.-search#search
+    ._dialog
+        ._content
+            .search-modal
+                ._wrap.wrap
+                    ._close(data-role="modal-close")
+                        +svg('cross', 'search-modal__cross-icon')
+                    ._title Поиск
+                    ._group
+                        input(type="text" placeholder="Введите ключевые слова, код заказа или серийный номер")._input
+                        button._btn
+                            +svg('search', 'search-modal__search-icon')

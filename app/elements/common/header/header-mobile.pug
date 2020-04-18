@@ -1,0 +1,65 @@
+header.header.-mobile
+    ._wrap.wrap
+        ._left-mobile-group
+            .hamburger(data-role="hamburger")
+                ._line.-top
+                ._line.-center
+                ._line.-bottom
+            ._logo
+                +svg('logo')
+        ._tools
+            ._tool
+                ._tool-btn(data-role="comparison")
+                    +svg('comparison')
+                    ._tool-count 5
+                include ../../index/comparison/comparison
+            ._tool
+                +svg('user')
+            ._tool(data-modal="#search")
+                +svg('search')
+.mobile-menu
+    ._list
+        a(href="")._link О нас
+            +svg('chevron', 'mobile-menu__chevron')
+        a(href="")._link Подбор приборов
+            +svg('chevron', 'mobile-menu__chevron')
+        a(href="")._link Каталог
+            +svg('chevron', 'mobile-menu__chevron')
+        a(href="")._link Готовые решения
+            +svg('chevron', 'mobile-menu__chevron')
+        a(href="")._link Полезная информация
+            +svg('chevron', 'mobile-menu__chevron')
+        a(href="")._link Контакты
+            +svg('chevron', 'mobile-menu__chevron')
+    ._slider
+        ._slider-nav-btn(data-mobile-contacts-nav="prev")
+            +svg('chevron', 'mobile-menu__slider-prev-icon')
+        .swiper-container(data-slider="mobile-contacts")
+            .swiper-wrapper
+                .swiper-slide.mobile-menu__contacts-slide
+                    .mobile-menu__contacts г. Новосибирск
+                    a(href="tel:+73832991913").mobile-menu__contacts +7 (383) 299-19-13
+                .swiper-slide.mobile-menu__contacts-slide
+                    .mobile-menu__contacts г. Москва
+                    a(href="tel:+73832991913").mobile-menu__contacts +7 (383) 299-19-13
+        ._slider-nav-btn(data-mobile-contacts-nav="next")
+            +svg('chevron', 'mobile-menu__slider-next-icon')
+    ._services
+        ._service-item(data-role="mobile-lang")
+            ._service-item-icon
+                +svg('ru')
+            ._service-name Русский
+                +svg('chevron', 'mobile-menu__chevron-lang')
+            ._lang-dropdown
+                ._lang-dropdown-item.-active Русский
+                a(href="")._lang-dropdown-item Английский
+        ._service-item
+            ._service-item-icon
+                ._cart-icon
+                    +svg('cart')
+                    ._cart-icon-count 2
+            ._service-name 25 150 р.
+        ._service-item
+            ._service-item-icon
+                +svg('list')
+            ._service-name мой список

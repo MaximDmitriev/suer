@@ -1,0 +1,33 @@
+$root: '.header';
+.header_black {
+  * {
+    transition: .4s;
+  }
+  .icon-logo {
+    fill: #000;
+    color: #000;
+  }
+  svg {
+    fill: #000;
+  }
+  #{$root} {
+    &__lang {
+      color: #000;
+    }
+    &__cart-title {
+      color: #000;
+    }
+    &__cart-price {
+      color: #000;
+    }
+    &__contacts-phone {
+      color: #000;
+    }
+    &__contacts-address {
+      color: #000;
+    }
+    &__menu-link {
+      color: #000;
+    }
+  }
+}

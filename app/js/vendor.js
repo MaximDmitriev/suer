@@ -1,0 +1,13 @@
+//=require ../../bower_components/jquery/dist/jquery.min.js
+//=require ../../bower_components/swiper/dist/js/swiper.js
+//=require ../../bower_components/jquery.scrollbar/jquery.scrollbar.js
+//=require ../../bower_components/kmodal/dist/js/kmodal.min.js
+//=require ../../node_modules/ion-rangeslider/js/ion.rangeSlider.min.js
+//=require ../../node_modules/svg4everybody/dist/svg4everybody.min.js
+//=require ../../node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js
+//=require poly.js
+//=require jquery-ui.min.js
+//=require jquery-ui-extended.js
+//=require ../../bower_components/wow/dist/wow.js
+//=require ../../bower_components/fancybox/dist/jquery.fancybox.min.js
+//=require ../../node_modules/html2canvas/dist/html2canvas.js

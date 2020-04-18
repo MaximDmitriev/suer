@@ -1,0 +1,55 @@
+.props__wrapper
+  .props.-right.-pressure.hidden-props
+    +svg('close', 'props__close-svg')
+    ._body
+      ._col.-pressure
+        ._inputs
+          label(for="props-from")._input-wrap
+              input(type="text" value=" -13 790 кПа" id="props-from")._input
+              ._placeholder От
+          label(for="props-to")._input-wrap
+              input(type="text" value="250 000 кПа" id="props-to")._input
+              ._placeholder От
+        input(type="text" name="my_range" value="").js-range-slider
+        ._radio-btns-wrap
+          ._radio-btns
+            label.radio.props__radio-btn
+              input(type="radio" name="pressure" data-label="кПа" checked)._real-input
+              ._fake-input
+              ._text кПа
+            label.radio.props__radio-btn
+              input(type="radio" name="pressure" data-label="Па")._real-input
+              ._fake-input
+              ._text Па
+            label.radio.props__radio-btn
+              input(type="radio" name="pressure" data-label="МПа")._real-input
+              ._fake-input
+              ._text МПа
+            label.radio.props__radio-btn
+              input(type="radio" name="pressure" data-label="Бар")._real-input
+              ._fake-input
+              ._text Бар
+          ._radio-btns.-lower.hidden
+            label.radio.props__radio-btn
+              input(type="radio" name="pressure" data-label="Атм")._real-input
+              ._fake-input
+              ._text Атм
+            label.radio.props__radio-btn
+              input(type="radio" name="pressure" data-label="кг/см2")._real-input
+              ._fake-input
+              ._text кг/см2
+            label.radio.props__radio-btn
+              input(type="radio" name="pressure" data-label="psi")._real-input
+              ._fake-input
+              ._text psi
+            label.radio.props__radio-btn
+              input(type="radio" name="pressure" data-label="кПа")._real-input
+              ._fake-input
+              ._text кПа
+        ._btn(data-role="show").-pressure Показать все 
+    ._footer
+      ._footer-btn.-left
+        +svg('arrow-left', 'props__arrow')
+      button._footer-btn-find.btn Найти
+      ._footer-btn.-right
+        +svg('arrow-right', 'props__arrow')

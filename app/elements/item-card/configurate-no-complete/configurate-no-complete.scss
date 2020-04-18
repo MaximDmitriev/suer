@@ -1,0 +1,41 @@
+.configurate-no-complete {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 50px;
+  &__text {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+  }
+  &__cross {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    top: 0;
+    right: 0;
+    .icon-cross {
+      fill: #7d7d7d;
+      transition: .4s;
+    }
+    &:hover {
+      cursor: pointer;
+      .icon-cross {
+        fill: #000;
+      }
+    }
+
+  }
+  &__btn {
+    margin-top: 15px;
+  }
+}

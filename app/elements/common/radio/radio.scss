@@ -1,0 +1,77 @@
+.radio {
+  $root: &;
+  display: flex;
+  align-items: center;
+  &:hover {
+    cursor: pointer;
+  }
+  &__fake-input {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    transition: .4s;
+    &:after {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      background: none;
+      border-radius: 5px;
+      transition: .4s;
+    }
+  }
+  &__text {
+    color: $txt-color;
+    font-size: 14px;
+    padding-left: 8px;
+  }
+  &__real-input {
+    display: none;
+    &:checked {
+      + #{$root} {
+        &__fake-input {
+          border-color: $yellow;
+          &:after {
+            background: $yellow;
+          }
+        }
+      }
+    }
+  }
+  &_checkbox {
+    #{$root} {
+      &__fake-input {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+        border-radius: 4px;
+        background-color: #ffffff;
+        border: 1px solid #e3e3e3;
+        cursor: pointer;
+        flex: none;
+        &:after {
+          background: url(img/checked.svg) #fff no-repeat center;
+          opacity: 0;
+        }
+      }
+      &__real-input {
+        &:checked {
+          + #{$root} {
+            &__fake-input {
+
+              &:after {
+                background: url(img/checked.svg) #fff no-repeat center;
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

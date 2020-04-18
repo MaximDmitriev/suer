@@ -1,0 +1,587 @@
+- var dataarray={1:{name:'Выходной сигнал',items:{1:{abbr:'D',text:'4…20 мА пост. тока, цифровая связь (протокол BRAIN)'},2:{abbr:'E',text:'4…20 мА пост. тока, цифровая связь (протокол HART 5)'},3:{abbr:'F',text:'FOUNDATION Fieldbus'},4:{abbr:'G',text:'PROFIBUS PA +C5:E6'},5:{abbr:'J',text:'4…20 мА пост. тока, цифровая связь (протокол HART 5/ HART 7)'}}},2:{name:'Диапазон перестройки верхнего предела шкалы (капсулы)',items:{1:{abbr:'A',text:'8…200 кПа'},2:{abbr:'B',text:'0,04…2 МПа'},3:{abbr:'C',text:'0,2…10 Мпа'},4:{abbr:'D',text:'1…50 МПа'}}},3:{name:'Материал частей, контактирующих с рабочей средой',items:{1:{abbr:'S',text:'Рабочий штуцер: 316L SST; Диафрагма: Хастеллой C-276; Прочее: 316L SST'},2:{abbr:'H',text:'Рабочий штуцер: Хастеллой C-276; Диафрагма: Хастеллой C-276; Прочее: Хастеллой C-276'}}},4:{name:'Подсоединение к процессу',items:{1:{abbr:'4',text:'Внутренняя резьба 1/2 NPT'},2:{abbr:'7',text:'Наружная резьба 1/2 NPT'},3:{abbr:'8',text:'Наружная резьба G 1/2 DIN 16 288'},4:{abbr:'9',text:'Наружная резьба M20х1.5 DIN 16 288'}}},5:{name:'Нет названия',items:{1:{abbr:'N',text:'Всегда N'}},},6:{name:'Нет названия',items:{1:{abbr:'0',text:'Всегда 0'}}},7:{name:'Корпус усилителя',items:{1:{abbr:'1',text:'Литой из алюминиевого сплава'},2:{abbr:'2',text:'Нержавеющая сталь ASTM CF-8M *5'},3:{abbr:'3',text:'Литой из алюминиевого сплава с коррозионной стойкостью'}}},8:{name:'Электрический подвод',items:{1:{abbr:'0',text:'Одно отверстие под электрический ввод без заглушки, внутренняя резьба G1/2'},2:{abbr:'2',text:'Два отверстия под электрический ввод без заглушек, внутренняя резьба 1/2 NPT'},3:{abbr:'4',text:'Два отверстия под электрический ввод без заглушки, внутренняя резьба M20'},4:{abbr:'5',text:'Два отверстия под электрический ввод с заглушкой, внутренняя резьба G1/2'},5:{abbr:'7',text:'Два отверстия под электрический ввод с заглушкой, внутренняя резьба 1/2 NPT'},6:{abbr:'9',text:'Два отверстия под электрический ввод с заглушкой, внутренняя резьба M20'},7:{abbr:'A',text:'Два отверстия под электрический ввод с заглушкой 316 SST, внутренняя резьба G1/2'},8:{abbr:'C',text:'Два отверстия под электрический ввод с заглушкой 316 SST, внутренняя резьба 1/2 NPT'},9:{abbr:'D',text:'Два отверстия под электрический ввод с заглушкой 316 SST, внутренняя резьба M20'}}},9:{name:'Встроенный индикатор',items:{1:{abbr:'D',text:'Цифровой индикатор'},2:{abbr:'E',text:'Цифровой индикатор с переключателем установки диапазона'},3:{abbr:'N',text:'Без индикации'},}},10:{name:'Кронштейн',items:{1:{abbr:'L',text:'Монтаж на 2-дюймовой трубе, материал  316 SST'},2:{abbr:'N',text:'Без кронштейна'}}}};
+- var addData={11:{name:'Взрывозащита',items:{1:{abbr:'FF1',text:'Сертификат взрывобезопасности по FM'},2:{abbr:'FS1',text:'Сертификация искробезопасности по стандарту FM'},3:{abbr:'FU1',text:'Комбинированное исполнение по FF1 и FS1'},4:{abbr:'KF22',text:'Сертификат пожаробезопасности по АТЕХ'},5:{abbr:'KS21',text:'Сертификат искробезопасности по АТЕХ'},6:{abbr:'KU22',text:'Комбинированное исполнение с сертификацией по KF22, KS21 и ATEX Intrinsically safe Ex ic'}}},12:{name:'Изменение цвета',items:{1:{abbr:'P',text:'Только крышки усилителя'},2:{abbr:'PR',text:'Крышек усилителя и терминала'},3:{abbr:'X2',text:'Антикоррозионное покрытие'}}},13:{name:'Дополнительная очистка',items:{1:{abbr:'K1',text:'Обезжиривание'},2:{abbr:'K2',text:'Обезжиривание вместе с капсулой с фторированным маслом. Рабочая температура: от –20 до 80 °С (от –4 до 176 °F)'}}},14:{name:'Наполнитель капсулы',items:{1:{abbr:'K3',text:'В качестве наполнителя капсулы используется фторированное масло. Рабочая температура: от –20 до 80 °С (от –4 до 176 °F)'}}},15:{name:'Единицы калибровки',items:{1:{abbr:'D1',text:'Р-калибровка (единицы –фунт на кв. дюйм)'},2:{abbr:'D3',text:'Бар-калибровка (единицы – бар)'},3:{abbr:'D4',text:'М-калибровка (единицы – кгс/см2)'}}},16:{name:'Сигнализация',items:{1:{abbr:'C1',text:'Сигнализация о выходе за нижний предел шкалы: Состояние выхода при отказе ЦПУ или ошибке аппаратуры: –5%, не более 3,2 мА постоянного тока'},2:{abbr:'C2',text:'Сигнализация о выходе за нижнее значение шкалы: Состояние выхода при отказе центрального процессора и ошибке аппаратуры –5%, не более 3,2 мА постоянного тока.'},3:{abbr:'C3',text:'Сигнализация о выходе за верхнее значение шкалы: Состояние выхода при отказе центрального процессора и ошибке аппаратуры 110%, не менее 21,6 мА постоянного тока.'}}},17:{name:'Заводская конфигурация данных',items:{1:{abbr:'CA',text:'Конфигурация данных для типа связи HART'},2:{abbr:'CB',text:'Конфигурация данных для типа связи BRAIN'}}},18:{name:'Выход состояния',items:{1:{abbr:'AL',text:'Выход транзистора (стокового типа). Номинальные значения: от 10,5 до 30 В постоянного тока, 120 мА постоянного тока (макс.). Нижний уровень: от 0 до 2 В постоянного тока'}}},19:{name:'Золоченая мембрана',items:{1:{abbr:'A1',text:'На поверхности разделительных мембран наносится золоченое покрытие, эффективное для защиты от проникновения водорода.'}}},20:{name:'Молниеотвод',items:{1:{abbr:'A',text:'Допустимый ток: максимум 6000 А (1×40 мкс); Повторно: 100 раз по 1000 А (1×40 мкс). Применяемые стандарты: IEC 61000-4-4, IEC 61000-4-5'}}},21:{name:'Внешние части из 316 SST',items:{1:{abbr:'HC',text:'Шильдик, табличка тега и винт регулировки нуля из 316 SST'}}},22 :{name:'Уплотнительное кольцо из фторированной резины',items:{1:{abbr:'HE',text:'Все уплотнительные кольца корпуса усилителя. Нижний предел температуры окружающей среды: – 15°С (5°F)'}}},23 :{name:'Прикрепленный шильдик',items:{1:{abbr:'N4',text:'Шильдик из нержавеющей стали 316 SST, прикреплённый к датчику.'}}},24 :{name:'Расширенная диагностика',items:{1:{abbr:'DG6',text:'Многоточечное наблюдение за процессом. Обнаружение блокировки импульсной линии. Мониторинг теплотрассы'}}},25 :{name:'Сертификат для оборудования, работающего под давлением',items:{1:{abbr:'PE3',text:'PED 97/23/EC. Категория III, Модуль H, Тип оборудования: Аксессуар под давлением - Резервуар, Тип жидкости: Жидкость или газ, Группа жидкости: 1 и 2'}}},26 :{name:'Заводской сертификат на материал',items:{1:{abbr:'M15',text:'Рабочий штуцер'}}},27 :{name:'Сертификат испытаний давлением/проверки утечек',items:{1:{abbr:'T05',text:'Испытательное давление: 200 кПа'},2:{abbr:'T06',text:'Испытательное давление: 2 МПа'},3:{abbr:'T07',text:'Испытательное давление: 10 МПа'},4:{abbr:'T08',text:'Испытательное давление: 50 МПа'}}}};
+.info(data-section="info").section#itemPage
+    ._wrap.wrap
+        ._nav
+            ._nav-item Главная
+            ._nav-divider >
+            ._nav-item Каталог
+            ._nav-divider >
+            ._nav-item Разделы приборов
+            ._nav-divider >
+            ._nav-item Абсолютное давление
+            ._nav-divider.-active >
+            ._nav-item.-active EXJ 510
+        ._headerbar
+            h2._title.section__title Датчик избыточного давления  <br>EJX 510
+            ._price-block
+                ._price-label Цена:
+                    span._price-cost По запросу
+                ._price-count
+                    ._price-count-number 1
+                    ._price-btn-group
+                        button._price-btn-up
+                            +svg('up-arrow-info', 'info__up-arrow-svg')
+                        button._price-btn-down
+                            +svg('up-arrow-info', 'info__down-arrow-svg')
+                .__price-btn.btn(data-modal="#configurate-no-complete") Заказать
+        // Добавляем новую ячейку
+        ._code-block.-visible.-valid(data-js-action="change-code-block")
+            ._code-block-item
+                ._code-popup(data-code="H").-hidden
+                    ._code-popup-content
+                        ._code-popup-txt.
+                            Выбранное в фильтре свойство “Взрывозащита: взрывонепронецаемая оболочка (Exd)” не сочетается со свойством <br>
+                            “Тип электрического присоединения: Штепсельный разъем (вилка DIN 43650)”.
+                        ._code-popup-txt.
+                            Предложено заменить “Штепсельный разъем (вилка DIN 43650)” на “Кабельный ввод (не бронированный кабель)”.
+                        ._code-popup-link Перейти к разделу
+                    ._code-popup-btns
+                        ._code-popup-btn.-ok
+                            +icon('tick')
+                        ._code-popup-btn.-cancel
+                            +icon('cancel')
+                ._code-block-labels
+                    ._code-block-label Код для заказа
+                    ._code-block-infogroup
+                        ._code-block-info
+                            ._code-block-infopoint.-system
+                            ._code-block-infotext Рекомендация системы
+                        ._code-block-info
+                            ._code-block-infopoint.-user
+                            ._code-block-infotext Ручной выбор опции
+                        ._code-block-info
+                            ._code-block-infopoint.-error
+                            ._code-block-infotext Несоответствие опции
+                ._code-block-groups
+                    ._code-block-group.-head
+                        ._code-block-cell-head EJX 510
+                    ._code-block-group.-required
+                        -var i = 1;
+                        -var e = 0;
+                        -var cl = '';
+                        each item in dataarray
+                            -if (i == 3 || i == 7) {cl = 'info__code-block-cell_error'; e++;}
+                            -else cl = ''
+                            ._cell-wrap(data-parameter-id=`${i}`)
+                                ._code-block-cell.-invalid(class=`${cl}`)
+                                    ._code-block-error=e
+                                ._cell-tooltip=item.name
+                            -i++;
+                    ._code-block-group.-optional
+                        each item in addData
+                            ._cell-wrap(data-parameter-id=`${i}`)
+                                ._code-block-cell
+                                    ._code-block-error 1
+                                ._cell-tooltip=item.name
+                            -i++;
+        ._code-block.-invalid(data-js-action="change-code-block")
+            ._code-block-item
+                ._code-block-label Код заказа:
+                    span._code-block-name  Вентильный блок
+                ._code-block-groups
+                    ._code-block-group.-head
+                        ._code-block-cell-head 0306
+                    ._code-block-group.-required
+                        -var j = 100;
+                        while (j < 108)
+                            ._cell-wrap(data-parameter-id=`${j}`)
+                                ._code-block-cell.-invalid
+                                    ._code-block-error 1
+                                ._cell-tooltip Нет данных
+                            -j++;
+                    ._code-block-group.-optional
+                        while (j < 115)
+                            ._cell-wrap(data-parameter-id=`${j}`)
+                                ._code-block-cell
+                                    ._code-block-error 1
+                                ._cell-tooltip Нет данных
+                            -j++;
+
+        ._container
+            ._view
+                .swiper-container(data-slider="info-slider").info__slider
+                    .info__slide-toolbar.-left
+                        .info__slide-tool.-active(data-js-action="change-slider" data-slider="img")
+                            +svg('camera', 'info__slide-tool-icon')
+                        .info__slide-tool
+                            +svg('360', 'info__slide-tool-icon')
+                        .info__slide-tool(data-js-action="change-slider" data-slider="draft")
+                            +svg('draft', 'info__slide-tool-icon')
+                    .info__slide-toolbar.-right
+                        .info__slide-tool(data-js-action="add-to")
+                            +svg('comparison', 'icon-comparison_info-tool')
+                        .info__slide-tool(data-js-action="add-to")
+                            +svg('list', 'icon-list_info-tool')
+                    .swiper-wrapper
+                        .swiper-slide.info__slide-wrapper(data-type="img")
+                            .info__slide-card
+                                a(href="img/info-slide1.jpg" data-fancybox="info-slider-img")
+                                    img(src="img/info-slide1.jpg", alt="device").info__slide-img
+                        .swiper-slide.info__slide-wrapper(data-type="img")
+                            .info__slide-card
+                                a(href="img/info-slide1.jpg" data-fancybox="info-slider-img")
+                                    img(src="img/info-slide1.jpg", alt="device").info__slide-img
+                        .swiper-slide.info__slide-wrapper(data-type="img")
+                            .info__slide-card
+                                a(href="img/info-slide1.jpg" data-fancybox="info-slider-img")
+                                    img(src="img/info-slide1.jpg", alt="device").info__slide-img
+                        .swiper-slide.info__slide-wrapper(data-type="img")
+                            .info__slide-card
+                                a(href="img/info-slide1.jpg" data-fancybox="info-slider-img")
+                                    img(src="img/info-slide1.jpg", alt="device").info__slide-img
+                        .swiper-slide.info__slide-wrapper(data-type="img")
+                            .info__slide-card
+                                a(href="img/info-slide1.jpg" data-fancybox="info-slider-img")
+                                    img(src="img/info-slide1.jpg", alt="device").info__slide-img
+                        .non-swiper-slide.info__slide-wrapper(data-type="draft")
+                            .info__slide-card
+                                a(href="img/ejx510black.png" data-fancybox="info-slider-draft")
+                                    img(src="img/ejx510black.png", alt="device").info__slide-img
+                        .non-swiper-slide.info__slide-wrapper(data-type="draft")
+                            .info__slide-card
+                                a(href="img/ejx510black.png" data-fancybox="info-slider-draft")
+                                    img(src="img/ejx510black.png", alt="device").info__slide-img
+                        .non-swiper-slide.info__slide-wrapper(data-type="draft")
+                            .info__slide-card
+                                a(href="img/ejx510black.png" data-fancybox="info-slider-draft")
+                                    img(src="img/ejx510black.png", alt="device").info__slide-img
+                    .info__slider-nav
+                        .info__slider-nav-btn.-prev(data-info-nav="prev")
+                            +svg('arrow-left', 'info__arrow-left-icon')
+                        .info__slider-nav-btn.-next(data-info-nav="next")
+                            +svg('arrow-right', 'info__arrow-right-icon')
+                .swiper-container(data-slider="info-slider-small").info__slider-small
+                    .swiper-wrapper
+                        .swiper-slide(data-type="img")
+                            .info__small-slide-card
+                                img(src="img/info-small-slide1.png", alt="device").info__small-slide-img
+                        .swiper-slide(data-type="img")
+                            .info__small-slide-card
+                                img(src="img/info-small-slide2.png", alt="device").info__small-slide-img
+                        .swiper-slide(data-type="img")
+                            .info__small-slide-card
+                                img(src="img/info-small-slide3.png", alt="device").info__small-slide-img
+                        .swiper-slide(data-type="img")
+                            .info__small-slide-card
+                                img(src="img/info-small-slide4.png", alt="device").info__small-slide-img
+                        .swiper-slide(data-type="img")
+                            .info__small-slide-card
+                                img(src="img/info-small-slide1.png", alt="device").info__small-slide-img
+                        .swiper-slide(data-type="draft")
+                            .info__small-slide-card
+                                img(src="img/info-small-slide1black.png", alt="device").info__small-slide-img
+                        .swiper-slide(data-type="draft")
+                            .info__small-slide-card
+                                img(src="img/info-small-slide1black.png", alt="device").info__small-slide-img
+                        .swiper-slide(data-type="draft")
+                            .info__small-slide-card
+                                img(src="img/info-small-slide1black.png", alt="device").info__small-slide-img
+                .info__slider-small-nav-btn.-prev(data-info-nav="prev")
+                    +svg('arrow-left', 'info__arrow-left-small-icon')
+                .info__slider-small-nav-btn.-next(data-info-nav="next")
+                    +svg('arrow-right', 'info__arrow-right-small-icon')
+                ._docs
+                    ._docs-header
+                        ._docs-label Документация
+                        ._docs-group
+                            ._docs-select(data-js-action="choose-doc-options")
+                                span._docs-select-value(data-js-store="docs-country" data-selected-value="") Страна
+                                +svg('down-arrow', 'info__docs-arrow-svg')
+                                ._docs-popup(data-js-action="set-scrollbar")
+                                    ._docs-popup-item(data-js-action="select-doc-option" data-js-add-action="change-docs-type" data-value="ru") Россия
+                                    ._docs-popup-item(data-js-action="select-doc-option" data-js-add-action="change-docs-type" data-value="ua") Украина
+                                    ._docs-popup-item(data-js-action="select-doc-option" data-js-add-action="change-docs-type" data-value="by") Беларусь
+                                    ._docs-popup-item(data-js-action="select-doc-option" data-js-add-action="change-docs-type" data-value="uk") Великобритания
+                                    ._docs-popup-item(data-js-action="select-doc-option" data-js-add-action="change-docs-type" data-value="de") Германия
+                            ._docs-select(data-js-action="choose-doc-options")
+                                span._docs-select-value(data-js-store="docs-year" data-selected-value="") Срок действия
+                                +svg('down-arrow', 'info__docs-arrow-svg')
+                                ._docs-popup(data-js-action="set-scrollbar")
+                                    ._docs-popup-item(data-js-action="select-doc-option" data-js-add-action="change-docs-type" data-value="2019") 2019
+                                    ._docs-popup-item(data-js-action="select-doc-option" data-js-add-action="change-docs-type" data-value="2018") 2018
+                                    ._docs-popup-item(data-js-action="select-doc-option" data-js-add-action="change-docs-type" data-value="2018") 2018
+                                    ._docs-popup-item(data-js-action="select-doc-option" data-js-add-action="change-docs-type" data-value="2017") 2017
+                                    ._docs-popup-item(data-js-action="select-doc-option" data-js-add-action="change-docs-type" data-value="2016") 2016
+                                    ._docs-popup-item(data-js-action="select-doc-option" data-js-add-action="change-docs-type" data-value="2015") 2015
+                                    ._docs-popup-item(data-js-action="select-doc-option" data-js-add-action="change-docs-type" data-value="2014") 2014
+                                    ._docs-popup-item(data-js-action="select-doc-option" data-js-add-action="change-docs-type" data-value="2013") 2013
+                                    ._docs-popup-item(data-js-action="select-doc-option" data-js-add-action="change-docs-type" data-value="2012") 2012
+                    ._docs-table
+                        ._docs-tabs
+                            ._docs-tab(data-js-action="change-docs-type" data-docs-type="technical").-active Техническая <br>документация
+                            ._docs-tab(data-js-action="change-docs-type" data-docs-type="exploitation") Эксплутационная <br>документация
+                            ._docs-tab(data-js-action="change-docs-type" data-docs-type="certificates") Сертификаты
+                        ._docs-table-body(data-js-action="set-scrollbar" data-js-role="docs-loading")
+                            ._docs-table-row.-header
+                                ._docs-row-left.-header Название
+                                ._docs-row-right.-header Срок действия
+                            ._docs-table-list(data-js-store="docs")
+                                a(href="#")._docs-table-row
+                                    ._docs-row-left
+                                        img(src="img/info-pdf.png", alt="pdf")._docs-pdf
+                                        | Сертификат соответствия EX
+                                    ._docs-row-right 02.08.2019
+                                a(href="#")._docs-table-row
+                                    ._docs-row-left
+                                        img(src="img/info-pdf.png", alt="pdf")._docs-pdf
+                                        | 75842-18: описание типа СИ
+                                    ._docs-row-right 03.08.2020
+                                a(href="#")._docs-table-row
+                                    ._docs-row-left
+                                        img(src="img/info-pdf.png", alt="pdf")._docs-pdf
+                                        | Методика проверки МП <br>202-013-2018
+                                    ._docs-row-right 05.08.2021
+                                a(href="#")._docs-table-row
+                                    ._docs-row-left
+                                        img(src="img/info-pdf.png", alt="pdf")._docs-pdf
+                                        | Сертификат соответствия EX
+                                    ._docs-row-right 02.08.2019
+                                a(href="#")._docs-table-row
+                                    ._docs-row-left
+                                        img(src="img/info-pdf.png", alt="pdf")._docs-pdf
+                                        | 75842-18: описание типа СИ
+                                    ._docs-row-right 03.08.2020
+                                a(href="#")._docs-table-row
+                                    ._docs-row-left
+                                        img(src="img/info-pdf.png", alt="pdf")._docs-pdf
+                                        | Методика проверки МП <br>202-013-2018
+                                    ._docs-row-right 05.08.2021
+                        ._docs-footer
+                            a(href="#")._docs-download-link Скачать все
+            ._specs
+                ._instock
+                    ._instock-item.-invalid
+                        +svg('info-cancel','info__instock-icon')
+                        ._instock-text СНЯТ С ПРОИЗВОДСТВА
+                    ._instock-item.-valid
+                        +svg('info-ok','info__instock-icon')
+                        ._instock-text есть В наличии
+                ._term Ориентировочные сроки изготовления:
+                    span._term-days 7 дней
+                //- для неконфигурируемых товаров
+                //- ._switchbar
+                //-   ._switchbar-info
+                //-     ._question-wrap(data-type="search")
+                //-       +svg('question', 'info__question')
+                //-     |Данный товар<br>не конфигурируется
+                //-   ._switchbar-switch.-disabled
+                //-     ._switchbar-switch-point
+                //-   ._switchbar-label.bold Все характеристики
+                //-     ._question-wrap(data-type="search")
+                //-       +svg('question', 'info__question')
+                ._switchbar(data-js-action="switch-mode")
+                    ._switchbar-label
+                        ._question-wrap(data-type="search")
+                            +svg('question', 'info__question')
+                        | Конфигуратор кода заказа
+                    ._switchbar-switch
+                        ._switchbar-switch-point
+                    ._switchbar-label.-active Все характеристики
+                        ._question-wrap(data-type="search")
+                            +svg('question', 'info__question')
+                ._speclist(data-name="speclist" data-js-action="set-scrollbar")
+                    ._speclist-item
+                        ._speclist-key Производитель:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal").-key
+                                +svg('question', 'info__question')
+                        ._speclist-dots
+                        ._speclist-value Yokogawa
+                    ._speclist-item
+                        ._speclist-key Тип измеряемого давления:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal").-key
+                                +svg('question', 'info__question')
+                        ._speclist-dots
+                        ._speclist-value Абсолютное давление
+                    ._speclist-item
+                        ._speclist-key Исполнение:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal").-key
+                                +svg('question', 'info__question')
+                        ._speclist-dots
+                        ._speclist-value Штуцерное фланцевое исполнение
+                    ._speclist-item
+                        ._speclist-key Основная погрешность:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal").-key
+                                +svg('question', 'info__question')
+                        ._speclist-dots
+                        ._speclist-value 0,04
+                    ._speclist-item
+                        ._speclist-key Выходной сигнал:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal").-key
+                                +svg('question', 'info__question')
+                        ._speclist-dots
+                        ._speclist-value Foundation Fieldbus; 4-20мА/HART;
+                    ._speclist-item
+                        ._speclist-key Исполнение и вид взрывозащиты:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal").-key
+                                +svg('question', 'info__question')
+                        ._speclist-dots
+                        ._speclist-value Общепромышленное исполнение,<br>Взрывонепроницаемая оболочка Exd.
+                    ._speclist-item
+                        ._speclist-key Электрическое присоединение:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal").-key
+                                +svg('question', 'info__question')
+                        ._speclist-dots
+                        ._speclist-value Кабельный ввод
+                    ._speclist-item
+                        ._speclist-key Подключение к процессу<br>(Технологическое соединение):
+                            ._question-wrap(data-type="search" data-tooltip-type="modal").-key
+                                +svg('question', 'info__question')
+                        ._speclist-dots
+                        ._speclist-value G½ наруж. трубная цилиндр. резьба,<br>G1 наруж. трубная цилиндр. резьба,<br>G2 наруж. трубная цилиндр. резьба,
+                    ._speclist-item
+                        ._speclist-key Диапазон t окружающей среды, °С:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal").-key
+                                +svg('question', 'info__question')
+                        ._speclist-dots
+                        ._speclist-value -51 … 85 °С
+                    ._speclist-item
+                        ._speclist-key Наличие индикации:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal").-key
+                                +svg('question', 'info__question')
+                        ._speclist-dots
+                        ._speclist-value ЖК индикация
+                    ._speclist-item
+                        ._speclist-key Диапазон t°с измеряемой <br>среды (процесса):
+                            ._question-wrap(data-type="search" data-tooltip-type="modal").-key
+                                +svg('question', 'info__question')
+                        ._speclist-dots
+                        ._speclist-value -40 … 120 °С
+                    ._speclist-item
+                        ._speclist-key Материал мембраны<br>(разделительной мембраны,<br>измерительной диафрагмы):
+                            ._question-wrap(data-type="search" data-tooltip-type="modal").-key
+                                +svg('question', 'info__question')
+                        ._speclist-dots
+                        ._speclist-value Hastelloy (сплав C-276)
+                    ._speclist-item
+                        ._speclist-key Наличие индикации:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal").-key
+                                +svg('question', 'info__question')
+                        ._speclist-dots
+                        ._speclist-value ЖК индикация
+                    ._speclist-item
+                        ._speclist-key Производитель:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal").-key
+                                +svg('question', 'info__question')
+                        ._speclist-dots
+                        ._speclist-value Yokogawa
+                    ._speclist-item
+                        ._speclist-key Тип измеряемого давления:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal").-key
+                                +svg('question', 'info__question')
+                        ._speclist-dots
+                        ._speclist-value Абсолютное давление
+                    ._speclist-item
+                        ._speclist-key Исполнение:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal").-key
+                                +svg('question', 'info__question')
+                        ._speclist-dots
+                        ._speclist-value Штуцерное фланцевое исполнение
+                ._config-box
+                    ._options-search
+                        ._options-search-wrap
+                            //._options-term 1.6Bar
+                            input(placeholder="Поиск по опциям" data-js-store="config-search")._options-search-input
+                            +svg('search', 'info__options-input-svg')
+                        ._options-full-btn(data-js-action="change-config-size")
+                            +svg('full-size')
+                            | Раскрыть
+                    ._options-search-labels
+                    ._configlist(data-name="configlist" data-js-action="set-scrollbar")
+                        ._configlist-header Обязательные опции
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'info__question')
+                        // Добавляем пункт в закрытую версию
+                        -i = 1;
+                        each item in dataarray
+                            .info__configlist-item(data-parameter-id=`${i}`)
+                                .info__configlist-marker.info__configlist-marker_invalid(data-marker='cancel')
+                                .info__configlist-key=item.name
+                                .info__configlist-shortname ?
+                                .info__configlist-value.info__configlist-value_empty Выберите необходимые вам опции
+                            -i++;
+                        ._configlist-header Дополнительные опции
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'info__question')
+                        each item in addData
+                            .info__configlist-item(data-parameter-id=`${i}`)
+                                .info__configlist-marker(data-marker='cancel')
+                                .info__configlist-key=item.name
+                                .info__configlist-shortname ?
+                                .info__configlist-value.info__configlist-value_empty Выберите необходимые вам опции
+                            -i++;
+                    ._details
+                        ._details-container
+                            ._details-nav
+                                ._details-nav-btn.-prev(details-info-nav="prev")
+                                    +svg('arrow-left', 'info__arrow-left-icon')
+                                ._details-back-btn(data-js-action="back-to-parameters") назад
+                                ._details-nav-btn.-next(details-info-nav="next")
+                                    +svg('arrow-right', 'info__arrow-right-icon')
+                            .swiper-container(data-slider="details-slider")
+                                // Делаем слайд для закрытой версии
+                                .swiper-wrapper
+                                    -i = 1
+                                    each item, index in dataarray
+                                        .swiper-slide(data-parameter-id=`${i}`)
+                                            .info__details-name Обязательная опция
+                                            .info__details-header
+                                                .info__details-marker.-invalid(data-marker='cancel')
+                                                .info__details-key=item.name
+                                                .info__details-shortname
+                                                .info__details-value
+                                            .info__details-list(data-js-action="set-scrollbar")
+                                                each val, i in item.items
+                                                    .info__details-row
+                                                        -if (index == 1)
+                                                            label.radio.-checkbox.info__details-radio-btn(data-js-action="select-value")
+                                                                input(type='checkbox' name=`detail-${index}` value=`${val.abbr}`).radio__real-input
+                                                                ._fake-input
+                                                                ._text.info__details-text=val.abbr
+                                                                .info__details-row-value=val.text
+                                                        -else
+                                                            label.radio.info__details-radio-btn(data-js-action="select-value")
+                                                                input(type='radio' name=`detail-${index}` value=`${val.abbr}`).radio__real-input
+                                                                ._fake-input
+                                                                ._text.info__details-text=val.abbr
+                                                                .info__details-row-value=val.text
+                                        -i++
+                                    each item, index in addData
+                                        .swiper-slide(data-parameter-id=`${i}`)
+
+
+                                            .info__details-name Дополнительная опция
+                                            .info__details-header
+                                                .info__details-marker(data-marker='cancel')
+                                                .info__details-key=item.name
+                                                .info__details-shortname
+                                                .info__details-value
+
+                                            .info__details-list(data-js-action="set-scrollbar")
+                                                .info__details-row
+                                                    label.radio.info__details-radio-btn(data-js-action="next")
+                                                        input(type="radio" name=`detail-${index}` value="next").radio__real-input
+                                                        ._fake-input
+                                                        .info__details-row-value Пропустить
+                                                each val, i in item.items
+                                                    .info__details-row
+                                                        label.radio.info__details-radio-btn(data-js-action="select-value")
+                                                            input(type="radio" name=`detail-${index}` value=`${val.abbr}`).radio__real-input
+                                                            ._fake-input
+                                                            ._text.info__details-text=val.abbr
+                                                            .info__details-row-value=val.text
+                                        -i++
+
+
+                ._reportbar.-right
+                    ._reportbar-left
+                        +svg('contract', 'info__reportbar-left-svg')
+                        ._reportbar-text Сформировать ткп
+                        ._reportbar-middle
+                            +svg('double-arrow')
+                    ._reportbar-right
+                        ._reportbar-text Сформировать опросный лист
+                        +svg('clipboard-list', 'info__reportbar-right-svg')
+        ._full
+            ._full-searchBar
+                ._full-searchBar-wrap
+                    input(placeholder="Поиск по опциям" data-js-store="config-search")._full-searchBar-input
+                    +svg('search', 'info__options-input-svg')
+                ._full-searchBar-btn(data-js-action="change-config-size")
+                    | свернуть
+                    ._full-searchBar-rect
+            ._fulloptions-search-labels
+            ._full-table
+                ._full-specs
+                    ._full-spec-header Обязательные опции
+                        ._question-wrap(data-type="search" data-tooltip-type="modal")
+                            +svg('question', 'info__question')
+                    //- ._full-spec-row.-first
+                    //-   ._full-spec-marker
+                    //-   ._full-spec-wrap.-first
+                    //-     ._full-spec-key Электрическое присоединение
+                    //-     ._full-spec-note К - 2x вентиляционный клапан, AlloyC
+                    // Делаем пункт для большой версии
+                    ._full-speclist(data-js-action="set-scrollbar")
+                        -i = 1
+                        -var cl = '';
+                        each item, index in dataarray
+                            -if (i == 1) cl = 'info__full-spec-row_active'
+                            -else cl = ''
+                            .info__full-spec-row(data-parameter-id=`${i}` class=`${cl}`)
+                                .info__full-spec-marker.-invalid
+                                .info__full-spec-wrap
+                                    .info__full-spec-key=item.name
+                                    .info__full-spec-note Ничего не выбрано
+                            -i++
+                        ._full-spec-header Дополнительные опции
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'info__question')
+                        each item, index in addData
+                            .info__full-spec-row(data-parameter-id=`${i}`)
+                                .info__full-spec-marker
+                                .info__full-spec-wrap
+                                    .info__full-spec-key=item.name
+                                    .info__full-spec-note=item.items[1].text
+                            -i++
+
+                ._full-details
+                    ._full-details-header
+                        ._full-details-name.-big Опция
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'info__question')
+                        ._full-details-name Цена
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'info__question')
+                        ._full-details-name Сроки <br>изготов-ния
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'info__question')
+                        ._full-details-name Что чаще <br>выбирают
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'info__question')
+                    // Делаем опции для раскрытого списка
+                    ._full-details-list#fullDetailsList
+                        -i = 1
+                        each item, index in dataarray
+                            -if (i == 1) cl = 'info__full-details-wrap_active'
+                            -else cl = ''
+                            .info__full-details-wrap(data-parameter-id=`${i}` class=`${cl}`)
+                                each val, i in item.items
+                                    .info__full-details-row
+                                        -if (index == 1)
+                                            label.radio.-checkbox.info__full-details-radio-btn(data-js-action="select-value")
+                                                input(type='checkbox' name=`full-detail-${index}` value=`${val.abbr}`).radio__real-input
+                                                ._fake-input
+                                                ._text.info__full-details-text=val.abbr
+                                                .info__full-details-value=val.text
+                                                .info__full-details-price По запросу
+                                                .info__full-details-days 5 дней
+                                                .info__full-details-likes 142
+                                        -else
+                                            label.radio.info__full-details-radio-btn(data-js-action="select-value")
+                                                input(type='radio' name=`full-detail-${index}` value=`${val.abbr}`).radio__real-input
+                                                ._fake-input
+                                                ._text.info__full-details-text=val.abbr
+                                                .info__full-details-value=val.text
+                                                .info__full-details-price По запросу
+                                                .info__full-details-days 5 дней
+                                                .info__full-details-likes 142
+                            -i++
+                        each item, index in addData
+                            .info__full-details-wrap(data-parameter-id=`${i}`)
+                                .info__full-details-row
+                                    label.radio.info__full-details-radio-btn(data-js-action="next")
+                                        input(type="radio" name=`full-detail-${index}` value="next").radio__real-input
+                                        ._fake-input
+                                        .info__full-details-row-value Пропустить
+                                each val, i in item.items
+                                    .info__full-details-row
+                                        label.radio.info__full-details-radio-btn(data-js-action="select-value")
+                                            input(type="radio" name=`full-detail-${index}` value=`${val.abbr}`).radio__real-input
+                                            ._fake-input
+                                            ._text.info__full-details-text=val.abbr
+                                            .info__full-details-value=val.text
+                                            .info__full-details-price По запросу
+                                            .info__full-details-days 5 дней
+                                            .info__full-details-likes 142
+                            -i++

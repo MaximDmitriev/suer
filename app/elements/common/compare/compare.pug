@@ -1,0 +1,25 @@
+.compare.section
+    ._left
+        ._left-wrap
+            .section__title.-white._title Вы можете быстро
+                br/ сравнить два товара
+                br/ введя строку заказа
+            ._desc (у вас должна быть строка заказа двух товаров)
+    ._right
+        ._full-btn
+            +svg('arrow-left', 'compare__arrow-left-icon')
+        ._right-wrap
+            .section__title.-white._form-title Вы можете быстро сравнить два товара введя строку заказа
+            ._form-desc (у вас должна быть строка заказа двух товаров)
+            form._form
+                ._form-group
+                    label(for="first-compare")._label Введите строку заказа первого прибора
+                    ._input-group
+                        input(type="text")#first-compare._input
+                        ._input-number 1
+                ._form-group
+                    label(for="second-compare")._label Введите строку заказа второго прибора
+                    ._input-group
+                        input(type="text")#second-compare._input
+                        ._input-number 2
+                .btn._btn Сравнить

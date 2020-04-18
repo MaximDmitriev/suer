@@ -1,0 +1,141 @@
+.fast-help {
+  $root: &;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  background: #0b0b0f url(img/main-bg.jpg) no-repeat fixed;
+  background-size: cover;
+  @media(max-width: 767px) {
+    padding: 30px 0;
+  }
+  &_active {
+    #{$root} {
+      &__form {
+        max-height: 1000px;
+      }
+      &__chevron {
+        transform: rotateZ(180deg);
+      }
+    }
+  }
+  &__head {
+    position: relative;
+    width: 100%;
+  }
+  &__banner {
+
+  }
+  &__overlay {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 70px 0;
+    @media(max-width: 767px) {
+      padding: 0;
+    }
+  }
+  &__title {
+    text-align: left;
+  }
+  &__txt {
+    margin: 15px 0 24px 0;
+    line-height: 28px;
+    font-size: 18px;
+    color: #ffffff;
+    opacity: 0.8;
+    @media(max-width: 767px) {
+      font-size: 14px;
+      line-height: 22px;
+      margin: 10px 0 0 0;
+    }
+  }
+  &__form {
+    width: 100%;
+    @media(max-width: 767px) {
+      max-height: 0;
+      transition: .4s;
+    }
+  }
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @media(max-width: 1199px) {
+      flex-direction: column;
+    }
+    @media(max-width: 767px) {
+      align-items: center;
+    }
+  }
+  &__input-group {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    @media(max-width: 1199px) {
+      justify-content: space-between;
+    }
+    @media(max-width: 767px) {
+      flex-direction: column;
+    }
+  }
+  &__input {
+    width: 270px;
+    &_text {
+      height: 45px;
+      width: 330px;
+      .input-item__placeholder_active {
+        height: initial;
+        top: -25px;
+      }
+      @media(max-width: 1199px) {
+        width: calc(33% - 15px);
+      }
+    }
+    &:not(:first-child) {
+      margin-left: 30px;
+      @media(max-width: 1199px) {
+        margin-left: 0;
+      }
+    }
+    @media(max-width: 1199px) {
+      width: calc(33% - 15px);
+    }
+    @media(max-width: 767px) {
+      width: 100%;
+      margin-top: 25px;
+    }
+  }
+  &__politics {
+    display: flex;
+    align-items: center;
+    margin-top: 35px;
+    br {
+      display: none;
+      @media(max-width: 991px) {
+        display: block;
+      }
+      @media(max-width: 767px) {
+        display: none;
+      }
+    }
+  }
+  &__btn {
+    @media(max-width: 1199px) {
+      margin-top: 30px;
+    }
+    @media(max-width: 767px) {
+      width: 290px;
+    }
+  }
+  &__chevron {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    display: none;
+    transition: .4s;
+    @media(max-width: 767px) {
+      display: block;
+    }
+  }
+}

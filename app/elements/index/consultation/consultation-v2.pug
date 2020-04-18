@@ -1,0 +1,30 @@
+.consultation.-v2.section
+    img(src="img/consultation-bg-2.jpg" alt="decorative element")._left-img
+    ._right-img
+    ._container
+        ._wrap.wrap
+            ._form
+                ._head
+                    h2._title.section__title.section__title_white Свяжитесь с нами
+                    ._content-txt.
+                        Остались какие-то вопросы? напишите нам
+                        и мы оперативно решим вашу проблему.
+                    +svg('chevron', 'consultation__chevron')
+                ._body
+                    ._input-group
+                        .input-item._input
+                            label(for="feedback-name")._placeholder.required Имя
+                            input(type="text" name="feedback-name")#feedback-name._input._input
+                        .input-item._input
+                            label(for="feedback-email")._placeholder.required E-mail
+                            input(type="text" name="feedback-email")#feedback-email._input._input
+                        .input-item._input.-text
+                            label(for="feedback-text")._placeholder.required Сообщение
+                            textarea(name="text" autocomplete="off")#feedback-text._input.auto-height
+                    ._politics
+                        label(for="feedback-politics").checkbox
+                            input(type="checkbox" name="feedback-politics" checked)#feedback-politics._real
+                            ._fake
+                            ._text Я согласен на обработку персональных данных и&nbsp;
+                                a(href="#")._link политикой&nbsp;конфиденциальности
+                    button.btn._btn Отправить

@@ -1,0 +1,21 @@
+.seo {
+  padding: 110px 0 80px 0;
+  @media(max-width: 1199px) {
+    padding: 95px 0 60px 0;
+  }
+  @media(max-width: 767px) {
+    padding: 40px 0;
+  }
+  &__txt {
+    max-width: 816px;
+    padding-top: 30px;
+    color: $txt-color;
+    font-size: 15px;
+    line-height: 24px;
+    opacity: 0.8;
+    @media(max-width: 767px) {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+}

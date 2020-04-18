@@ -1,0 +1,230 @@
+.useful-info {
+  $root: &;
+  padding: 80px 0 110px 0;
+  @media(max-width: 1199px) {
+    padding: 65px 0 95px 0;
+  }
+  @media(max-width: 767px) {
+    padding: 40px 0;
+  }
+  &__wrap {
+    align-items: center;
+  }
+  &__slider-nav {
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 15px;
+    display: none;
+    @media(max-width: 991px) {
+      display: flex;
+      margin-top: 50px;
+      margin-bottom: 25px;
+    }
+    @media(max-width: 767px) {
+      display: none;
+    }
+  }
+  &__slider-nav-btn {
+    display: flex;
+    width: 40px;
+    &:hover {
+      cursor: pointer;
+    }
+    &_prev {
+      justify-content: flex-start;
+      &:hover {
+        #{$root} {
+          &__arrow-left-icon {
+            transform: translateX(-3px);
+          }
+        }
+      }
+    }
+    &_next {
+      justify-content: flex-end;
+      &:hover {
+        #{$root} {
+          &__arrow-right-icon {
+            transform: translateX(3px);
+          }
+        }
+      }
+    }
+  }
+  &__nav-arrow-left-icon {
+    fill: #414141;
+    transition: .4s;
+  }
+  &__nav-arrow-right-icon {
+    fill: #414141;
+    transition: .4s;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 90px;
+    width: 100%;
+    padding: 0 15px;
+    @media(max-width: 991px) {
+      margin-top: 0;
+    }
+  }
+  &__list-wrapper {
+    justify-content: space-between;
+    @media(max-width: 991px) {
+      justify-content: flex-start;
+    }
+  }
+  &__item-wrap {
+    display: flex;
+    justify-content: center;
+    // flex-shrink: 1;
+    width: 270px;
+    max-width: 270px;
+    min-width: 270px;
+    padding: 20px 0;
+    @media(max-width: 1199px) {
+      width: 260px;
+      max-width: 260px;
+      min-width: 260px;
+    }
+    @media(max-width: 991px) {
+      width: initial;
+      max-width: initial;
+      min-width: initial;
+    }
+    &_big {
+      width: 565px;
+      max-width: 565px;
+      min-width: 565px;
+      @media(max-width: 1199px) {
+        width: 400px;
+        max-width: 400px;
+        min-width: 400px;
+      }
+      @media(max-width: 991px) {
+        width: initial;
+        max-width: initial;
+        min-width: initial;
+      }
+    }
+    &:hover {
+      text-decoration: none;
+
+      #{$root} {
+        &__item {
+          box-shadow: 0 5px 15px rgba(5, 5, 5, 0.15);
+        }
+        &__arrow-right-icon {
+          transform: translateX(5px);
+        }
+      }
+    }
+  }
+  &__item {
+    padding: 25px;
+    min-height: 366px;
+    box-shadow: 0 5px 10px rgba(5, 5, 5, 0.15);
+    background: #fafafa;
+    color: $txt-color;
+    transition: .4s;
+
+
+    width: 270px;
+    max-width: 270px;
+    min-width: 270px;
+    @media(max-width: 1199px) {
+      width: 260px;
+      max-width: 260px;
+      min-width: 260px;
+    }
+    @media(max-width: 991px) {
+      width: initial;
+      max-width: initial;
+      min-width: initial;
+    }
+    &_big {
+      width: 565px;
+      max-width: 565px;
+      min-width: 565px;
+      @media(max-width: 1199px) {
+        width: 400px;
+        max-width: 400px;
+        min-width: 400px;
+      }
+      @media(max-width: 991px) {
+        width: initial;
+        max-width: initial;
+        min-width: initial;
+      }
+    }
+  }
+  &__item-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__item-date {
+    font-size: 12px;
+    color: rgba($txt-color, .5);
+  }
+  &__item-content {
+    margin-top: 14px;
+  }
+  &__item-title {
+    color: $txt-color;
+    font-family: $title-font;
+    font-size: 24px;
+    font-weight: 700;
+    @media(max-width: 767px) {
+      font-size: 18px;
+    }
+  }
+  &__item-desc {
+    color: rgba($txt-color, .7);
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 5px;
+  }
+  &__item-photo {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    margin-top: 20px;
+  }
+  &__arrow-right-icon {
+    width: 24px;
+    height: 14px;
+    fill: #00a8d4;
+    transition: .4s;
+  }
+  &__btn {
+    margin-top: 50px;
+  }
+  &__pagination {
+    display: none;
+    justify-content: center;
+    width: 100%;
+    @media(max-width: 767px) {
+      display: flex;
+    }
+  }
+  &__pagination-item {
+    width: 17px;
+    height: 17px;
+    border: 1px solid #3a3738;
+    background: #fff;
+    border-radius: 10px;
+    &_active {
+      border-color: $yellow;
+      background: $yellow;
+    }
+    &:not(:first-child) {
+      margin-left: 10px;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

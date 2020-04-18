@@ -1,0 +1,46 @@
+.useful-info.section
+    ._wrap.wrap
+        .section__title Полезная информация
+        .section__desc Мы собрали для вас ценную информацию в этих статьях. Также как
+            br/ выбранный нами инновационный путь, в своем классическом
+            br/ представлении, допускает внедрение модели развития.
+        ._slider-nav
+            ._slider-nav-btn.-prev(data-useful-info-nav="prev")
+                +svg('arrow-left', 'useful-info__nav-arrow-left-icon')
+            ._slider-nav-btn.-next(data-useful-info-nav="next")
+                +svg('arrow-right', 'useful-info__nav-arrow-right-icon')
+        ._list.swiper-container.wow.fadeIn(data-slider="useful-info")
+            ._list-wrapper.swiper-wrapper
+                a(href="#")._item-wrap.swiper-slide
+                    ._item
+                        ._item-head
+                            ._item-date 24.04.19
+                            +svg('arrow-right', 'useful-info__arrow-right-icon')
+                        ._item-content
+                            ._item-title Заголовок статьи
+                            ._item-desc Описание статьи в несколько строчек примерно вот столько, или чуть больше.
+                            img(src="img/useful-info-1.jpg")._item-photo
+                a(href="#")._item-wrap.-big.swiper-slide
+                    ._item.-big
+                        ._item-head
+                            ._item-date 24.04.19
+                            +svg('arrow-right', 'useful-info__arrow-right-icon')
+                        ._item-content
+                            ._item-title Заголовок второй статьи
+                                br/ в две строчки
+                            ._item-desc Описание статьи в несколько строчек примерно вот столько, или чуть больше,так думаю достаточно
+                            img(src="img/useful-info-2.jpg")._item-photo
+                a(href="#")._item-wrap.swiper-slide
+                    ._item
+                        ._item-head
+                            ._item-date 24.04.19
+                            +svg('arrow-right', 'useful-info__arrow-right-icon')
+                        ._item-content
+                            ._item-title Заголовок статьи
+                            ._item-desc Описание статьи в несколько строчек примерно вот столько, или чуть больше.
+                            img(src="img/useful-info-3.jpg")._item-photo
+        ._pagination
+            ._pagination-item.-active
+            ._pagination-item
+            ._pagination-item
+        .btn.-contour.-big._btn Смотреть все статьи

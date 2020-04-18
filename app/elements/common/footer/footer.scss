@@ -1,0 +1,221 @@
+.footer {
+  $root: &;
+  background: #231f20;
+  &__wrap {
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 80px;
+    @media(max-width: 991px) {
+      justify-content: center;
+    }
+    @media(max-width: 767px) {
+      padding-top: 60px;
+    }
+  }
+  &__top-btn {
+    position: absolute;
+    top: -25px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: $yellow;
+    border-radius: 4px;
+    transition: .4s;
+    transform: translateY(0);
+    @media(max-width: 1230px) {
+      right: 15px;
+    }
+    &:hover {
+      cursor: pointer;
+      transform: translateY(-5px);
+    }
+  }
+  &__row {
+    width: 25%;
+    @media(max-width: 991px) {
+      width: 33%;
+    }
+    @media(max-width: 767px) {
+      display: none;
+    }
+    &:not(:first-child) {
+      position: relative;
+      &:before {
+        content: '';
+        width: 1px;
+        height: 100px;
+        background: rgba(#fff, .1);
+        position: absolute;
+        top: 0;
+        left: -45px;
+      }
+    }
+    &_contacts {
+      @media(max-width: 991px) {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 35px;
+        &:before {
+          display: none;
+        }
+      }
+      @media(max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+      }
+    }
+  }
+  &__group {
+    &_contacts {
+      width: 100%;
+    }
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+  }
+  &__group-title {
+    font-family: $title-font;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    @media(max-width: 991px) {
+      font-size: 14px;
+    }
+    @media(max-width: 767px) {
+      font-size: 18px;
+      text-align: center;
+      width: 100%;
+    }
+  }
+  &__nav-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  &__nav-link {
+    color: rgba(#fff, .7);
+    line-height: 32px;
+    font-size: 15px;
+    transition: .4s;
+    @media(max-width: 991px) {
+      font-size: 14px;
+    }
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+  &__contacts {
+    margin-top: 15px;
+    @media(max-width: 991px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
+    }
+    @media(max-width: 767px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__company-name {
+    font-size: 15px;
+    line-height: 24px;
+    color: #fff;
+    @media(max-width: 991px) {
+      font-size: 14px;
+      width: 200px;
+    }
+    @media(max-width: 767px) {
+      text-align: center;
+      width: 100%;
+      color: rgba(#fff, .7);
+    }
+  }
+  &__contacts-value {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 15px;
+    @media(max-width: 991px) {
+      font-size: 14px;
+    }
+    &:not(:first-child) {
+      margin-top: 22px;
+    }
+  }
+  &__phone-icon {
+    fill: $yellow;
+    margin-right: 9px;
+  }
+  &__map-marker-icon {
+    margin-right: 9px;
+  }
+  &__mail-icon {
+    margin-right: 9px;
+  }
+  &__social {
+    margin-top: 35px;
+    @media(max-width: 991px) {
+      margin-top: 0;
+    }
+    @media(max-width: 767px) {
+      margin-top: 25px;
+    }
+  }
+  &__column {
+    width: 100%;
+    padding: 35px 0 30px;
+    margin-top: 60px;
+    border-top: 1px solid rgba(#fff, .1);
+    @media(max-width: 767px) {
+      padding: 20px 0;
+      margin: 30px 0 0 0;
+    }
+  }
+  &__copyright {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgba(#fff, .7);
+    text-align: center;
+    @media(max-width: 767px) {
+      font-size: 13px;
+    }
+  }
+  &__contacts-slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 200px;
+    margin-top: 22px;
+    margin-left: -20px;
+    @media(max-width: 991px) {
+      max-width: 250px;
+      margin-top: 0;
+    }
+    @media(max-width: 767px) {
+      max-width: 100%;
+      margin-left: 0;
+      margin-top: 25px;
+    }
+  }
+  &__contacts-slider-container {
+    width: 160px;
+    @media(max-width: 991px) {
+      width: 200px;
+      padding-left: 25px;
+    }
+  }
+  &__contacts-nav-btn {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

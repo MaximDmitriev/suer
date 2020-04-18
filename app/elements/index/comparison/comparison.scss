@@ -1,0 +1,126 @@
+.comparison {
+  position: absolute;
+  top: calc(100% + 20px);
+  right: -63px;
+  width: 345px;
+  background: #f7f7f7;
+  border-radius: 5px;
+  box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.25);
+  will-change: transform;
+  transform-origin: 0 0;
+  transform: rotateX(-20deg);
+  transition: .4s;
+  opacity: 0;
+  visibility: hidden;
+  @media(max-width: 394px) {
+    right: -98px;
+    width: 290px;
+  }
+  &-box {
+    position: relative;
+    z-index: 1002;
+    perspective: 2000px;
+  }
+  &_active {
+    opacity: 1;
+    visibility: visible;
+    transform: rotateX(0);
+  }
+  &:hover {
+    cursor: default;
+  }
+  &:after {
+    content: '';
+    width: 18px;
+    height: 18px;
+    background: #f7f7f7;
+    border-radius: 2px 0 0 0;
+    transform: rotateZ(45deg);
+    position: absolute;
+    top: -7px;
+    right: 65px;
+    @media(max-width: 394px) {
+      right: 102px;
+    }
+  }
+  &__head {
+    position: relative;
+    padding: 30px;
+  }
+  &__head-title {
+    font-size: 18px;
+    font-family: $title-font;
+    color: #231f20;
+  }
+  &__head-count {
+    color: #231f20;
+    font-size: 12px;
+    margin-top: 7px;
+  }
+  &__close {
+    position: absolute;
+    top: 35px;
+    right: 40px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__content {
+
+  }
+  &__list {
+    max-height: 337px;
+    overflow: hidden;
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    &:not(:last-child) {
+      border-bottom: 1px solid #eaeaea;
+    }
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+  &__item-photo {
+    width: 65px;
+    flex: none;
+    @media(max-width: 394px) {
+      display: none;
+    }
+  }
+  &__item-info {
+    padding-left: 10px;
+    padding-right: 20px;
+    @media(max-width: 394px) {
+      padding-left: 0;
+    }
+  }
+  &__item-type {
+    font-size: 12px;
+    color: #231f20;
+  }
+  &__item-name {
+    font-weight: bold;
+    color: #231f20;
+    margin-top: 5px;
+  }
+  &__delete {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__item-delete {
+    width: 8px;
+    height: 8px;
+  }
+  &__footer {
+    border-top: 1px solid #eaeaea;
+    padding: 25px 50px;
+  }
+  &__btn {
+    width: 100%;
+  }
+}

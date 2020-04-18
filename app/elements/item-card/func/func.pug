@@ -1,0 +1,192 @@
+.func.section(data-section="func")
+  ._wrap.wrap
+    ._header
+      ._title Функции
+      +svg('angle-up', 'list__up-svg')
+    ._desc
+      ._desc-content
+        ._desc-row
+          ._desc-key Запасные части для
+          ._desc-value Датчик предельного уровня Minicap FTC260
+        ._desc-row
+          ._desc-key Код заказа
+          ._desc-value FTC260-AA2A1
+        ._desc-row
+          ._desc-key Статус продукта
+          ._desc-value 
+            ._desc-status.-ok
+            |Доступно
+      ._desc-view
+        img(src="img/scetch.jpg", alt="part")._desc-img
+    ._toolbar
+      ._toolbar-fileblock
+        +svg('document', 'func__toolbar-svg-pdf')
+        +svg('word')
+      ._toolbar-switcher
+        label(for="func-toolbar" tabindex="1")._checkbox
+          input(type="checkbox" name="func-toolbar")#func-toolbar._checkbox-real
+          ._checkbox-fake
+              +svg('checked', 'func__check-svg')
+          ._checkbox-text Показать / скрыть файлы
+    ._table
+      ._row
+        ._checkbox-cell
+          label(for="func-header-row" tabindex="1")._checkbox
+            input(type="checkbox" name="func-header-row")#func-header-row._checkbox-real
+            ._checkbox-fake
+                +svg('checked', 'func__check-svg')
+        ._cell.-code Код заказа
+        ._cell.-desc Описание
+        ._cell.-small Рек.
+        ._cell.-mid(data-name="kt") КТ
+        ._cell.-mid(data-name="pos") Поз
+        ._cell.-mid(data-name="group") Группа
+        ._cell.-mid(data-name="avalible") Доступен
+        ._cell.-small Сов.
+        ._cell.-small Мон.
+      ._row
+        ._checkbox-cell.-transparent
+          label(for="func-search" tabindex="1")._checkbox
+            input(type="checkbox" name="func-search")#func-search._checkbox-real
+            ._checkbox-fake
+                +svg('checked', 'func__check-svg')
+        ._cell.-code 
+          input(type="text" placeholder="Фильтр" data-name="code")._cell-input
+        ._cell.-desc 
+          input(type="text" placeholder="Фильтр" data-name="desc")._cell-input
+        ._cell.-small 
+        ._cell.-mid(data-name="kt")
+          input(type="text" placeholder="Фильтр" data-name="kt")._cell-input
+        ._cell.-mid(data-name="pos")
+          input(type="text" placeholder="Фильтр" data-name="pos")._cell-input
+        ._cell.-mid(data-name="group")
+          input(type="text" placeholder="Фильтр" data-name="group")._cell-input
+        ._cell.-mid(data-name="avalible")
+          input(type="text" placeholder="Фильтр" data-name="avalible")._cell-input
+        ._cell.-small
+        ._cell.-small
+      ._table-body 
+        ._row
+          ._checkbox-cell
+            label(for="func-row1" tabindex="1")._checkbox
+              input(type="checkbox" name="func-row1")#func-row1._checkbox-real
+              ._checkbox-fake
+                  +svg('checked', 'func__check-svg')
+          ._cell.-code 5432230011
+          ._cell.-desc Корпус F14 РВТ, Pg13, крышка 
+          ._cell.-small 
+          ._cell.-mid(data-name="kt") S
+          ._cell.-mid(data-name="pos") 10
+          ._cell.-mid(data-name="group") Без заданной категории
+          ._cell.-mid(data-name="avalible") > 1998.1, < 2009.12
+          ._cell.-small
+          ._cell.-small
+        ._row
+          ._checkbox-cell
+            label(for="func-row2" tabindex="1")._checkbox
+              input(type="checkbox" name="func-row2")#func-row2._checkbox-real
+              ._checkbox-fake
+                  +svg('checked', 'func__check-svg')
+          ._cell.-code 5432010000
+          ._cell.-desc Крышка F14 РВТ, уплотн.
+          ._cell.-small +
+          ._cell.-mid(data-name="kt") S
+          ._cell.-mid(data-name="pos") 20
+          ._cell.-mid(data-name="group") Без заданной категории
+          ._cell.-mid(data-name="avalible") 
+          ._cell.-small
+          ._cell.-small 
+        ._row
+          ._checkbox-cell
+            label(for="func-row3" tabindex="1")._checkbox
+              input(type="checkbox" name="func-row3")#func-row3._checkbox-real
+              ._checkbox-fake
+                  +svg('checked', 'func__check-svg')
+          ._cell.-code 52006109
+          ._cell.-desc эл. модуль FTC260 Ex 10,8-45VDC, PNP
+          ._cell.-small +
+          ._cell.-mid(data-name="kt") S
+          ._cell.-mid(data-name="pos") 30
+          ._cell.-mid(data-name="group") Без заданной категории
+          ._cell.-mid(data-name="avalible")
+          ._cell.-small
+          ._cell.-small
+        ._row
+          ._checkbox-cell
+            label(for="func-row4" tabindex="1")._checkbox
+              input(type="checkbox" name="func-row4")#func-row4._checkbox-real
+              ._checkbox-fake
+                  +svg('checked', 'func__check-svg')
+          ._cell.-code 5432050000
+          ._cell.-desc гнездо E8 (F14), винт, РВТ
+          ._cell.-small +
+          ._cell.-mid(data-name="kt") S
+          ._cell.-mid(data-name="pos") 12
+          ._cell.-mid(data-name="group") Без заданной категории
+          ._cell.-mid(data-name="avalible") 
+          ._cell.-small
+          ._cell.-small 
+        ._row
+          ._checkbox-cell
+            label(for="func-row5" tabindex="1")._checkbox
+              input(type="checkbox" name="func-row5")#func-row5._checkbox-real
+              ._checkbox-fake
+                  +svg('checked', 'func__check-svg')
+          ._cell.-code 5432260001
+          ._cell.-desc зонд FTC260 R1 PPS, уплотн.
+          ._cell.-small 
+          ._cell.-mid(data-name="kt") S
+          ._cell.-mid(data-name="pos") 50
+          ._cell.-mid(data-name="group") Без заданной категории
+          ._cell.-mid(data-name="avalible")
+          ._cell.-small
+          ._cell.-small
+        ._row
+          ._checkbox-cell
+            label(for="func-row6" tabindex="1")._checkbox
+              input(type="checkbox" name="func-row6")#func-row6._checkbox-real
+              ._checkbox-fake
+                  +svg('checked', 'func__check-svg')
+          ._cell.-code 9432151001
+          ._cell.-desc переходник R1-1/2 > R1, PPS
+          ._cell.-small 
+          ._cell.-mid(data-name="kt") A
+          ._cell.-mid(data-name="pos") 
+          ._cell.-mid(data-name="group") Без заданной категории
+          ._cell.-mid(data-name="avalible") 
+          ._cell.-small
+            +svg('document', 'func__row-svg')
+          ._cell.-small 
+        ._row
+          ._checkbox-cell
+            label(for="func-row6" tabindex="1")._checkbox
+              input(type="checkbox" name="func-row6")#func-row6._checkbox-real
+              ._checkbox-fake
+                  +svg('checked', 'func__check-svg')
+          ._cell.-code 9432151021
+          ._cell.-desc переходник R1-1/2 > R1, PPS
+          ._cell.-small 
+          ._cell.-mid(data-name="kt") A
+          ._cell.-mid(data-name="pos") 
+          ._cell.-mid(data-name="group") Без заданной категории
+          ._cell.-mid(data-name="avalible") 
+          ._cell.-small
+            +svg('document', 'func__row-svg')
+          ._cell.-small 
+        ._row
+          ._checkbox-cell
+            label(for="func-row5" tabindex="1")._checkbox
+              input(type="checkbox" name="func-row5")#func-row5._checkbox-real
+              ._checkbox-fake
+                  +svg('checked', 'func__check-svg')
+          ._cell.-code 52014047
+          ._cell.-desc упл. кольцо G1-1/2, 48x55 FA, 5шт
+          ._cell.-small 
+          ._cell.-mid(data-name="kt") S
+          ._cell.-mid(data-name="pos")
+          ._cell.-mid(data-name="group") Без заданной категории
+          ._cell.-mid(data-name="avalible")
+          ._cell.-small
+          ._cell.-small
+      ._footer
+        button._footer-btn.btn заказать

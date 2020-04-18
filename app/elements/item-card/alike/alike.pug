@@ -1,0 +1,622 @@
+.alike.section(data-section="alike")
+    ._wrap.wrap
+        ._title-block
+            h2._title.section__subtitle Вам могут подойти
+            button(data-show="true")._switch-btn.-hidden.btn
+                ._switch-btn-text Список исключенных
+                ._switch-btn-count 1
+                ._question-wrap(data-type="search")
+                    +svg('question', 'alike__question-info')
+            ._title-btn Все аналоги
+        ._content
+            ._container-pinned
+            ._container#alikeScroll
+                ._info
+                ._card(data-alike-card-status="show")
+                    ._card-view
+                        ._card-img-wrap
+                            img(src="img/Cerabar.jpg", alt="device")._card-img
+                        ._card-icons
+                            ._card-info.-ok
+                                | 99%
+                                ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                    +svg('question', 'alike__question-info')
+                            ._card-icon(data-state="unpinned")
+                                +svg('push-pin', 'alike__pin-svg')
+                            ._card-icon(data-state="show")
+                                +svg('close', 'alike__close-svg')
+                            ._card-icon
+                                +svg('graph')
+                            ._card-icon
+                                +svg('docs')
+                    ._card-title Cerabar M PMP55
+                    ._card-price
+                        | Цена:
+                        span._card-price-value По запросу
+                    ._card-btns
+                        button._card-btn.btn.btn_contour подробнее о товаре
+                        button._card-btn-cart.btn
+                            +svg('cart', 'alike__cart-svg')
+                    ._card-row.-grey
+                        ._card-row-key
+                            | Производитель:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value НПК ВИП
+                    ._card-row.-grey
+                        ._card-row-key
+                            | Тип давления:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Абсолютное
+                    ._card-row.-grey
+                        ._card-row-key
+                            | Выходной <br>сигнал:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Foundation Fieldbus
+                    ._card-row.-grey
+                        ._card-row-key
+                            | Электрическое присоединение:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Кабельный ввод
+                    ._card-row
+                        ._card-row-key
+                            | Межпроверочный интервал:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value 5 лет
+                    ._card-row
+                        ._card-row-key
+                            | Наличие индикации:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Без индикации
+                    ._card-row.hidden(data-name="add")
+                        ._card-row-key
+                            | Межпроверочный интервал:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value 5 лет
+                    ._card-row.hidden(data-name="add")
+                        ._card-row-key
+                            | Наличие индикации:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Без индикации
+                    ._card-footer
+                        ._card-footer-txt Смотреть все параметры
+                        +svg('down-arrow', 'alike__arrow-svg')
+                ._card(data-alike-card-status="show")
+                    ._card-view
+                        ._card-img-wrap
+                            img(src="img/Rosemount.jpg", alt="device")._card-img
+                        ._card-icons
+                            ._card-info.-ok
+                                | 90%
+                                ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                    +svg('question', 'alike__question-info')
+                            ._card-icon(data-state="unpinned")
+                                +svg('push-pin', 'alike__pin-svg')
+                            ._card-icon(data-state="show")
+                                +svg('close', 'alike__close-svg')
+                            ._card-icon
+                                +svg('graph')
+                            ._card-icon
+                                +svg('docs')
+                    ._card-title Rosemount 3051СА
+                    ._card-price
+                        | Цена:
+                        span._card-price-value По запросу
+                    ._card-btns
+                        button._card-btn.btn.btn_contour подробнее о товаре
+                        button._card-btn-cart.btn
+                            +svg('cart', 'alike__cart-svg')
+                    ._card-row.-grey
+                        ._card-row-key
+                            | Производитель:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value НПК ВИП
+                    ._card-row.-grey
+                        ._card-row-key
+                            | Тип давления:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Абсолютное
+                    ._card-row.-grey
+                        ._card-row-key
+                            | Выходной <br>сигнал:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Foundation Fieldbus
+                    ._card-row.-grey
+                        ._card-row-key
+                            | Электрическое присоединение:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Кабельный ввод
+                    ._card-row
+                        ._card-row-key
+                            | Межпроверочный интервал:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value 5 лет
+                    ._card-row
+                        ._card-row-key
+                            | Наличие индикации:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Без индикации
+                    ._card-row.hidden(data-name="add")
+                        ._card-row-key
+                            | Межпроверочный интервал:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value 5 лет
+                    ._card-row.hidden(data-name="add")
+                        ._card-row-key
+                            | Наличие индикации:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Без индикации
+                    ._card-footer
+                        ._card-footer-txt Смотреть все параметры
+                        +svg('down-arrow', 'alike__arrow-svg')
+                ._card(data-alike-card-status="show")
+                    ._card-view
+                        ._card-img-wrap
+                            img(src="img/Rosemount2.jpg", alt="device")._card-img
+                        ._card-icons
+                            ._card-info.-warn
+                                | 85%
+                                ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                    +svg('question', 'alike__question-info')
+                            ._card-icon(data-state="unpinned")
+                                +svg('push-pin', 'alike__pin-svg')
+                            ._card-icon(data-state="show")
+                                +svg('close', 'alike__close-svg')
+                            ._card-icon
+                                +svg('graph')
+                            ._card-icon
+                                +svg('docs')
+                    ._card-title Rosemount 3051TА
+                    ._card-price
+                        | Цена:
+                        span._card-price-value По запросу
+                    ._card-btns
+                        button._card-btn.btn.btn_contour подробнее о товаре
+                        button._card-btn-cart.btn
+                            +svg('cart', 'alike__cart-svg')
+                    ._card-row.-grey
+                        ._card-row-key
+                            | Производитель:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value НПК ВИП
+                    ._card-row.-grey
+                        ._card-row-key
+                            | Тип давления:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Абсолютное
+                    ._card-row.-grey
+                        ._card-row-key
+                            | Выходной <br>сигнал:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Foundation Fieldbus
+                    ._card-row.-grey
+                        ._card-row-key
+                            | Электрическое присоединение:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Кабельный ввод
+                    ._card-row
+                        ._card-row-key
+                            | Межпроверочный интервал:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value 5 лет
+                    ._card-row
+                        ._card-row-key
+                            | Наличие индикации:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Без индикации
+                    ._card-row.hidden(data-name="add")
+                        ._card-row-key
+                            | Межпроверочный интервал:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value 5 лет
+                    ._card-row.hidden(data-name="add")
+                        ._card-row-key
+                            | Наличие индикации:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Без индикации
+                    ._card-footer
+                        ._card-footer-txt Смотреть все параметры
+                        +svg('down-arrow', 'alike__arrow-svg')
+                ._card(data-alike-card-status="show")
+                    ._card-view
+                        ._card-img-wrap
+                            img(src="img/Rosemount3.jpg", alt="device")._card-img
+                        ._card-icons
+                            ._card-info.-danger
+                                | 30%
+                                ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                    +svg('question', 'alike__question-info')
+                            ._card-icon(data-state="unpinned")
+                                +svg('push-pin', 'alike__pin-svg')
+                            ._card-icon(data-state="show")
+                                +svg('close', 'alike__close-svg')
+                            ._card-icon
+                                +svg('graph')
+                            ._card-icon
+                                +svg('docs')
+                    ._card-title Rosemount 3051S_СА
+                    ._card-price
+                        | Цена:
+                        span._card-price-value По запросу
+                    ._card-btns
+                        button._card-btn.btn.btn_contour подробнее о товаре
+                        button._card-btn-cart.btn
+                            +svg('cart', 'alike__cart-svg')
+                    ._card-row.-grey
+                        ._card-row-key
+                            | Производитель:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value НПК ВИП
+                    ._card-row.-grey
+                        ._card-row-key
+                            | Тип давления:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Абсолютное
+                    ._card-row.-grey
+                        ._card-row-key
+                            | Выходной <br>сигнал:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Foundation Fieldbus
+                    ._card-row.-grey
+                        ._card-row-key
+                            | Электрическое присоединение:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Кабельный ввод
+                    ._card-row
+                        ._card-row-key
+                            | Межпроверочный интервал:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value 5 лет
+                    ._card-row
+                        ._card-row-key
+                            | Наличие индикации:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Без индикации
+                    ._card-row.hidden(data-name="add")
+                        ._card-row-key
+                            | Межпроверочный интервал:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value 5 лет
+                    ._card-row.hidden(data-name="add")
+                        ._card-row-key
+                            | Наличие индикации:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Без индикации
+                    ._card-footer
+                        ._card-footer-txt Смотреть все параметры
+                        +svg('down-arrow', 'alike__arrow-svg')
+                ._card(data-alike-card-status="show")
+                    ._card-view
+                        ._card-img-wrap
+                            img(src="img/Cerabar.jpg", alt="device")._card-img
+                        ._card-icons
+                            ._card-info.-ok
+                                | 99%
+                                ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                    +svg('question', 'alike__question-info')
+                            ._card-icon(data-state="unpinned")
+                                +svg('push-pin', 'alike__pin-svg')
+                            ._card-icon(data-state="show")
+                                +svg('close', 'alike__close-svg')
+                            ._card-icon
+                                +svg('graph')
+                            ._card-icon
+                                +svg('docs')
+                    ._card-title Cerabar M PMP55
+                    ._card-price
+                        | Цена:
+                        span._card-price-value По запросу
+                    ._card-btns
+                        button._card-btn.btn.btn_contour подробнее о товаре
+                        button._card-btn-cart.btn
+                            +svg('cart', 'alike__cart-svg')
+                    ._card-row.-grey
+                        ._card-row-key
+                            | Производитель:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value НПК ВИП
+                    ._card-row.-grey
+                        ._card-row-key
+                            | Тип давления:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Абсолютное
+                    ._card-row.-grey
+                        ._card-row-key
+                            | Выходной <br>сигнал:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Foundation Fieldbus
+                    ._card-row.-grey
+                        ._card-row-key
+                            | Электрическое присоединение:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Кабельный ввод
+                    ._card-row
+                        ._card-row-key
+                            | Межпроверочный интервал:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value 5 лет
+                    ._card-row
+                        ._card-row-key
+                            | Наличие индикации:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Без индикации
+                    ._card-row.hidden(data-name="add")
+                        ._card-row-key
+                            | Межпроверочный интервал:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value 5 лет
+                    ._card-row.hidden(data-name="add")
+                        ._card-row-key
+                            | Наличие индикации:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Без индикации
+                    ._card-footer
+                        ._card-footer-txt Смотреть все параметры
+                        +svg('down-arrow', 'alike__arrow-svg')
+                ._card(data-alike-card-status="show")
+                    ._card-view
+                        ._card-img-wrap
+                            img(src="img/Rosemount.jpg", alt="device")._card-img
+                        ._card-icons
+                            ._card-info.-ok
+                                | 99%
+                                ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                    +svg('question', 'alike__question-info')
+                            ._card-icon(data-state="unpinned")
+                                +svg('push-pin', 'alike__pin-svg')
+                            ._card-icon(data-state="show")
+                                +svg('close', 'alike__close-svg')
+                            ._card-icon
+                                +svg('graph')
+                            ._card-icon
+                                +svg('docs')
+                    ._card-title Cerabar M PMP55
+                    ._card-price
+                        | Цена:
+                        span._card-price-value По запросу
+                    ._card-btns
+                        button._card-btn.btn.btn_contour подробнее о товаре
+                        button._card-btn-cart.btn
+                            +svg('cart', 'alike__cart-svg')
+                    ._card-row.-grey
+                        ._card-row-key
+                            | Производитель:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value НПК ВИП
+                    ._card-row.-grey
+                        ._card-row-key
+                            | Тип давления:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Абсолютное
+                    ._card-row.-grey
+                        ._card-row-key
+                            | Выходной <br>сигнал:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Foundation Fieldbus
+                    ._card-row.-grey
+                        ._card-row-key
+                            | Электрическое присоединение:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Кабельный ввод
+                    ._card-row
+                        ._card-row-key
+                            | Межпроверочный интервал:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value 5 лет
+                    ._card-row
+                        ._card-row-key
+                            | Наличие индикации:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Без индикации
+                    ._card-row.hidden(data-name="add")
+                        ._card-row-key
+                            | Межпроверочный интервал:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value 5 лет
+                    ._card-row.hidden(data-name="add")
+                        ._card-row-key
+                            | Наличие индикации:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Без индикации
+                    ._card-footer
+                        ._card-footer-txt Смотреть все параметры
+                        +svg('down-arrow', 'alike__arrow-svg')
+                ._card(data-alike-card-status="show")
+                    ._card-view
+                        ._card-img-wrap
+                            img(src="img/Rosemount2.jpg", alt="device")._card-img
+                        ._card-icons
+                            ._card-info.-ok
+                                | 99%
+                                ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                    +svg('question', 'alike__question-info')
+                            ._card-icon(data-state="unpinned")
+                                +svg('push-pin', 'alike__pin-svg')
+                            ._card-icon(data-state="show")
+                                +svg('close', 'alike__close-svg')
+                            ._card-icon
+                                +svg('graph')
+                            ._card-icon
+                                +svg('docs')
+                    ._card-title Cerabar M PMP55
+                    ._card-price
+                        | Цена:
+                        span._card-price-value По запросу
+                    ._card-btns
+                        button._card-btn.btn.btn_contour подробнее о товаре
+                        button._card-btn-cart.btn
+                            +svg('cart', 'alike__cart-svg')
+                    ._card-row.-grey
+                        ._card-row-key
+                            | Производитель:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value НПК ВИП
+                    ._card-row.-grey
+                        ._card-row-key
+                            | Тип давления:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Абсолютное
+                    ._card-row.-grey
+                        ._card-row-key
+                            | Выходной <br>сигнал:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Foundation Fieldbus
+                    ._card-row.-grey
+                        ._card-row-key
+                            | Электрическое присоединение:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Кабельный ввод
+                    ._card-row
+                        ._card-row-key
+                            | Межпроверочный интервал:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value 5 лет
+                    ._card-row
+                        ._card-row-key
+                            | Наличие индикации:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Без индикации
+                    ._card-row.hidden(data-name="add")
+                        ._card-row-key
+                            | Межпроверочный интервал:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value 5 лет
+                    ._card-row.hidden(data-name="add")
+                        ._card-row-key
+                            | Наличие индикации:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Без индикации
+                    ._card-footer
+                        ._card-footer-txt Смотреть все параметры
+                        +svg('down-arrow', 'alike__arrow-svg')
+                ._card(data-alike-card-status="show")
+                    ._card-view
+                        ._card-img-wrap
+                            img(src="img/Rosemount3.jpg", alt="device")._card-img
+                        ._card-icons
+                            ._card-info.-ok
+                                | 99%
+                                ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                    +svg('question', 'alike__question-info')
+                            ._card-icon(data-state="unpinned")
+                                +svg('push-pin', 'alike__pin-svg')
+                            ._card-icon(data-state="show")
+                                +svg('close', 'alike__close-svg')
+                            ._card-icon
+                                +svg('graph')
+                            ._card-icon
+                                +svg('docs')
+                    ._card-title Cerabar M PMP55
+                    ._card-price
+                        | Цена:
+                        span._card-price-value По запросу
+                    ._card-btns
+                        button._card-btn.btn.btn_contour подробнее о товаре
+                        button._card-btn-cart.btn
+                            +svg('cart', 'alike__cart-svg')
+                    ._card-row.-grey
+                        ._card-row-key
+                            | Производитель:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value НПК ВИП
+                    ._card-row.-grey
+                        ._card-row-key
+                            | Тип давления:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Абсолютное
+                    ._card-row.-grey
+                        ._card-row-key
+                            | Выходной <br>сигнал:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Foundation Fieldbus
+                    ._card-row.-grey
+                        ._card-row-key
+                            | Электрическое присоединение:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Кабельный ввод
+                    ._card-row
+                        ._card-row-key
+                            | Межпроверочный интервал:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value 5 лет
+                    ._card-row
+                        ._card-row-key
+                            | Наличие индикации:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Без индикации
+                    ._card-row.hidden(data-name="add")
+                        ._card-row-key
+                            | Межпроверочный интервал:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value 5 лет
+                    ._card-row.hidden(data-name="add")
+                        ._card-row-key
+                            | Наличие индикации:
+                            ._question-wrap(data-type="search" data-tooltip-type="modal")
+                                +svg('question', 'alike__question')
+                        ._card-row-value Без индикации
+                    ._card-footer
+                        ._card-footer-txt Смотреть все параметры
+                        +svg('down-arrow', 'alike__arrow-svg')

@@ -1,0 +1,74 @@
+.catalog.section
+    h2._title.section__title Каталог
+    ._wrap.wrap
+        ._popup
+            img(src="img/device-2.jpg")._popup-img
+            ._popup-info
+                ._popup-title Выберите тип давления
+                ._popup-list
+                    ._popup-list-box
+                        label(for="catalog-check-1" tabindex="1")._checkbox
+                            input(type="checkbox" name="catalog-check")#catalog-check-1._checkbox-real
+                            ._checkbox-fake
+                                +svg('checked', 'catalog__check-svg')
+                            ._checkbox-text Абсолютное
+                        label(for="catalog-check-2" tabindex="1")._checkbox
+                            input(type="checkbox" name="catalog-check")#catalog-check-2._checkbox-real
+                            ._checkbox-fake
+                                +svg('checked', 'catalog__check-svg')
+                            ._checkbox-text Избыточное
+                        label(for="catalog-check-3" tabindex="1")._checkbox
+                            input(type="checkbox" name="catalog-check")#catalog-check-3._checkbox-real
+                            ._checkbox-fake
+                                +svg('checked', 'catalog__check-svg')
+                            ._checkbox-text Дифференциальное
+                        label(for="catalog-check-4" tabindex="1")._checkbox
+                            input(type="checkbox" name="catalog-check")#catalog-check-4._checkbox-real
+                            ._checkbox-fake
+                                +svg('checked', 'catalog__check-svg')
+                            ._checkbox-text Разряжение
+                    ._popup-list-box
+                        label(for="catalog-check-5" tabindex="1")._checkbox
+                            input(type="checkbox" name="catalog-check")#catalog-check-5._checkbox-real
+                            ._checkbox-fake
+                                +svg('checked', 'catalog__check-svg')
+                            ._checkbox-text Дифференциальное
+                        label(for="catalog-check-6" tabindex="1")._checkbox
+                            input(type="checkbox" name="catalog-check")#catalog-check-6._checkbox-real
+                            ._checkbox-fake
+                                +svg('checked', 'catalog__check-svg')
+                            ._checkbox-text Разряжение
+                        label(for="catalog-check-7" tabindex="1")._checkbox
+                            input(type="checkbox" name="catalog-check")#catalog-check-7._checkbox-real
+                            ._checkbox-fake
+                                +svg('checked', 'catalog__check-svg')
+                            ._checkbox-text Гидростатическое
+                ._popup-footer
+                    a(href="#").btn._btn Перейти в каталог
+                    ._back-btn Вернуться назад
+        ._container.wow.fadeIn
+            ._item
+                img(src="img/pressure.png")._item-img
+                ._item-name Давление
+            ._item
+                img(src="img/consumption.png")._item-img
+                ._item-name Расход
+            ._item
+                img(src="img/temperature.png")._item-img
+                ._item-name Температура
+            ._item
+                img(src="img/level.png")._item-img
+                ._item-name Уровень
+            ._item
+                img(src="img/communicator.png")._item-img
+                ._item-name Средства коммуникации
+            ._item
+                img(src="img/monitor.png")._item-img
+                ._item-name Функционнальная <br> аппаратура
+            ._item
+                img(src="img/analytics.png")._item-img
+                ._item-name Аналитика
+            ._item
+                img(src="img/valves.png")._item-img
+                ._item-name Клапаны, регуляторы
+        button.btn.-contour.-big._btn Смотреть весь каталог

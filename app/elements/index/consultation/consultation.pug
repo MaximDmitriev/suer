@@ -1,0 +1,30 @@
+.consultation.section
+    img(src="img/consultation-bg-1.jpg" alt="decorative element")._left-img
+    ._right-img
+    ._container
+        ._wrap.wrap
+            ._form
+                ._head
+                    h2._title.section__title.section__title_white Нужна консультация?
+                    ._content-txt.
+                        Не можете подобрать прибор? напишите нам
+                        и мы оперативно решим вашу проблему.
+                    +svg('chevron', 'consultation__chevron')
+                ._body
+                    ._input-group
+                        .input-item._input
+                            label(for="consultation-name")._placeholder.required Имя
+                            input(type="text" name="consultation-name")#consultation-name._input._input
+                        .input-item._input
+                            label(for="consultation-email")._placeholder.required E-mail
+                            input(type="text" name="consultation-email")#consultation-email._input._input
+                        .input-item._input.-text
+                            label(for="consultation-text")._placeholder.required Сообщение
+                            textarea(name="text" autocomplete="off")#consultation-text._input.auto-height
+                    ._politics
+                        label(for="consultation-politics").checkbox
+                            input(type="checkbox" name="consultation-politics" checked)#consultation-politics._real
+                            ._fake
+                            ._text Я согласен на обработку персональных данных и&nbsp;
+                                a(href="#")._link политикой&nbsp;конфиденциальности
+                    button.btn._btn Отправить

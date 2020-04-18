@@ -1,0 +1,27 @@
+{
+  "name": "Gulp builder",
+  "description": "Bower components for gulp builder",
+  "main": "index.js",
+  "authors": [
+    "kprod"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#^7.0.0",
+    "jquery": "^3.2.1",
+    "swiper": "^4.5.0",
+    "jquery.scrollbar": "^0.2.11",
+    "kmodal": "1.5.0",
+    "animate.css": "^3.7.2",
+    "wow": "wow.js#^1.1.2",
+    "fancybox": "fancyBox#^3.5.7"
+  }
+}

@@ -1,0 +1,413 @@
+[class^="icon-"] {
+  flex: none;
+}
+
+.icon {
+  // app/elements/header
+  &-logo {
+    width: 200px;
+    height: 51px;
+    fill: $yellow;
+    color: #fff;
+  }
+  &-cart {
+    width: 26px;
+    height: 27px;
+    fill: #fff;
+  }
+  &-comparison {
+    width: 25px;
+    height: 25px;
+    fill: #fff;
+    &_info-tool {
+      width: 17px;
+      height: 17px;
+      fill: #898989;
+    }
+  }
+  &-list {
+    width: 19px;
+    height: 25px;
+    fill: #fff;
+    &_info-tool {
+      width: 17px;
+      height: 17px;
+      fill: #898989;
+    }
+  }
+  &-search {
+    width: 25px;
+    height: 25px;
+    fill: #fff;
+  }
+  &-phone {
+    width: 14px;
+    height: 14px;
+    fill: #fff;
+  }
+  &-phone-full {
+    width: 14px;
+    height: 14px;
+    fill: $yellow;
+  }
+  &-map-marker {
+    width: 11px;
+    height: 15px;
+    fill: #fff;
+  }
+  &-map-marker-full {
+    width: 11px;
+    height: 15px;
+    fill: $yellow;
+  }
+  &-angle-left {
+    width: 5px;
+    height: 8px;
+    fill: #fff;
+  }
+  &-angle-right {
+    width: 5px;
+    height: 8px;
+    fill: #fff;
+  }
+  &-user {
+    width: 23px;
+    height: 23px;
+    fill: #fff;
+  }
+  &-ru {
+    width: 27px;
+    height: 27px;
+    fill: #fff;
+  }
+
+  // app/elements/banner
+  &-arrow-left {
+    width: 30px;
+    height: 18px;
+    fill: #fff;
+    @media(max-width: 767px) {
+      width: 23px;
+      height: 14px;
+    }
+  }
+  &-arrow-right {
+    width: 30px;
+    height: 18px;
+    fill: #fff;
+    @media(max-width: 767px) {
+      width: 23px;
+      height: 14px;
+    }
+  }
+  &-production-cogs {
+    width: 44px;
+    height: 44px;
+    fill: #fff;
+    @media(max-width: 1199px) {
+      width: 36px;
+      height: 36px;
+    }
+  }
+  &-handshake {
+    width: 47px;
+    height: 34px;
+    fill: #fff;
+    @media(max-width: 1199px) {
+      width: 38px;
+      height: 28px;
+    }
+  }
+  &-filter {
+    width: 37px;
+    height: 37px;
+    fill: #fff;
+    @media(max-width: 1199px) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  &-certificate {
+    width: 44px;
+    height: 44px;
+    fill: #fff;
+    @media(max-width: 1199px) {
+      width: 36px;
+      height: 36px;
+    }
+  }
+  &-box {
+    width: 46px;
+    height: 47px;
+    fill: #fff;
+    @media(max-width: 1199px) {
+      width: 37px;
+      height: 38px;
+    }
+  }
+
+  // app/elements/social-list
+  &-whats-app {
+    width: 17px;
+    height: 17px;
+    fill: #fff;
+  }
+  &-viber {
+    width: 16px;
+    height: 16px;
+    fill: #fff;
+  }
+  &-telegram {
+    width: 17px;
+    height: 14px;
+    fill: #fff;
+  }
+  &-vk {
+    width: 18px;
+    height: 10px;
+    fill: #fff;
+  }
+  &-facebook {
+    width: 8px;
+    height: 15px;
+    fill: #fff;
+  }
+
+  // footer
+  &-mail-full {
+    width: 12px;
+    height: 10px;
+    fill: $yellow;
+  }
+  &-angle-up {
+    width: 20px;
+    height: 13px;
+    fill: $txt-color;
+  }
+
+  &.communicator {
+    width: 62px;
+    height: 115px;
+    background: url(img/icons/communicator.png);
+  }
+  &.pressure {
+    width: 55px;
+    height: 114px;
+    background: url(img/icons/pressure.png);
+  }
+  &.consumption {
+    width: 77px;
+    height: 114px;
+    background: url(img/icons/consumption.png);
+  }
+  &.temperature {
+    width: 33px;
+    height: 116px;
+    background: url(img/icons/temperature.png);
+  }
+  &.level {
+    width: 67px;
+    height: 114px;
+    background: url(img/icons/level.png);
+  }
+  &.valves {
+    width: 44px;
+    height: 115px;
+    background: url(img/icons/valves.png);
+  }
+  &.analytics {
+    width: 44px;
+    height: 116px;
+    background: url(img/icons/analytics.png);
+  }
+  &.monitor {
+    width: 100px;
+    height: 70px;
+    background: url(img/icons/monitor.png);
+  }
+  &-checked {
+    width: 10px;
+    height: 8px;
+    fill: $btn-color;
+  }
+
+  // app/elements/comparison
+  &-cross {
+    width: 14px;
+    height: 14px;
+    fill: #625f60;
+  }
+
+  // app/elements/fast-help
+  &-chevron {
+    width: 14px;
+    height: 7px;
+    fill: #fff;
+  }
+
+  //app/elements/selection 
+  &.filters {
+    width: 26px;
+    height: 19px;
+    background: url(img/icons/filter.png);
+  }
+  &-down {
+    width: 8px;
+    height: 4px;
+    fill: #a9a7a6;
+  }
+  &-segment {
+    width: 19px;
+    height: 19px;
+    fill: #00a8d4;
+    transition: 0.2s;
+  }
+  &-question {
+    width: 17px;
+    height: 16px;
+    fill: #aaaaaa;
+    &:hover {
+      fill: $yellow;
+    }
+  }
+  &-close {
+    width: 8px;
+    height: 8px;
+    fill: #ffffff;
+  }
+  &-add {
+    width: 30px;
+    height: 30px;
+    fill: $btn-color;
+  }
+  &-filter-btn {
+    width: 20px;
+    height: 16px;
+    fill: $span-color;
+  }
+  &-tuning {
+    width: 14px;
+    height: 10px;
+    fill: #7e7d7d;
+  }
+  &-contr-arrow {
+    width: 13px;
+    height: 13px;
+    fill: #000000;
+  }
+  &-down-arrow {
+    width: 12px;
+    height: 9px;
+    fill: #000000;
+  }
+  &-mouse {
+    width: 30px;
+    height: 30px;
+    fill: none;
+    stroke: #000;
+  }
+
+  // app/elements/item-card/info
+  &-camera {
+    width: 27px;
+    height: 27px;
+    fill: #898989;
+  }
+  &-360 {
+    width: 27px;
+    height: 27px;
+    fill: #898989;
+  }
+  &-draft {
+    width: 27px;
+    height: 27px;
+    fill: #898989;
+  }
+  &-up-arrow-info {
+    width: 8px;
+    height: 5px;
+    fill: #000000;
+  }
+  &-info-ok {
+    width: 12px;
+    height: 9px;
+    fill: #fff;
+  }
+  &-info-cancel {
+    width: 9px;
+    height: 9px;
+    fill: #fff;
+  }
+  &-double-arrow {
+    width: 16px;
+    height: 17px;
+    fill: #000;
+  }
+  &-contract {
+    width: 25px;
+    height: 25px;
+    fill: #000;
+  }
+  &-clipboard-list {
+    width: 20px;
+    height: 24px;
+    fill: #fff;
+  }
+  &-full-size {
+    width: 22px;
+    height: 22px;
+    fill: #ffffff;
+  }
+  &-document {
+    width: 23px;
+    height: 30px;
+    fill: #4d4d4d;
+  }
+  &-word {
+    width: 23px;
+    height: 30px;
+    fill: #4d4d4d;
+  }
+  &-docs {
+    width: 12px;
+    height: 16px;
+    fill: #575757;
+  }
+  &-graph {
+    width: 15px;
+    height: 15px;
+    fill: #575757;
+  }
+  &-push-pin {
+    width: 19px;
+    height: 19px;
+    fill: #575757;
+  }
+  &.tick {
+    width: 19px;
+    height: 14px;
+    background: url(img/icons/tick.png);
+  }
+  &.cancel {
+    width: 13px;
+    height: 13px;
+    background: url(img/icons/cancel.png);
+  }
+
+  //app/elements/common/fixed-bar
+  &-print {
+    width: 22px;
+    height: 22px;
+    fill: #fff;
+  }
+  &-pdf {
+    width: 22px;
+    height: 22px;
+    fill: #fff;
+  }
+  &-email {
+    width: 22px;
+    height: 22px;
+    fill: #fff;
+  }
+}

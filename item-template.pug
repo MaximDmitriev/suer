@@ -1,0 +1,58 @@
+<div class="res__card" data-state="unpinned">
+	<div class="res__card-top">
+		<div class="res__card-labels">
+			<div class="res__card-label res__card-label_danger">Снят с производства</div>
+		</div>
+		<div class="res__card-view">
+			<div class="res__card-img-wrap"><img class="res__card-img" src="img/{item-name}.jpg" alt="device">
+			</div>
+			<div class="res__card-icons">
+				<div class="res__card-info res__card-info_ok">99%
+					<div class="res__question-wrap" data-type="search" data-tooltip-type="modal">
+						<svg class="icon-question res__question-info">
+							<use xlink:href="img/elements.svg#question"></use>
+						</svg>
+					</div>
+				</div>
+				<div class="res__card-icon" data-action="pin" data-role="small-tooltip"
+				     data-tooltip-text="Закрепить">
+					<svg class="icon-push-pin alike__pin-svg">
+						<use xlink:href="img/elements.svg#push-pin"></use>
+					</svg>
+				</div>
+				<div class="res__card-icon" data-action="hide" data-role="small-tooltip"
+				     data-tooltip-text="Скрыть">
+					<svg class="icon-close alike__close-svg">
+						<use xlink:href="img/elements.svg#close"></use>
+					</svg>
+				</div>
+				<div class="res__card-icon" data-action="graph" data-role="small-tooltip"
+				     data-tooltip-text="К сравнению">
+					<svg class="icon-graph ">
+						<use xlink:href="img/elements.svg#graph"></use>
+					</svg>
+				</div>
+				<div class="res__card-icon" data-action="list" data-role="small-tooltip"
+				     data-tooltip-text="В мой список">
+					<svg class="icon-docs ">
+						<use xlink:href="img/elements.svg#docs"></use>
+					</svg>
+				</div>
+			</div>
+		</div>
+		<div class="res__card-title">{item-name}</div>
+		<div class="res__card-price">Цена:<span class="res__card-price-value">По запросу</span></div>
+		<div class="res__card-link-btn">Подобрать аналог</div>
+		<div class="res__card-btns">
+			<button class="res__card-btn btn btn_contour">подробнее о товаре</button>
+			<button class="res__card-btn-cart btn">
+				<svg class="icon-cart alike__cart-svg">
+					<use xlink:href="img/elements.svg#cart"></use>
+				</svg>
+			</button>
+		</div>
+	</div>
+	<div class="res__card-table">
+		{list}
+	</div>
+</div>

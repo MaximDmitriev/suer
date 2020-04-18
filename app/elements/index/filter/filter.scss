@@ -1,0 +1,41 @@
+.filter {
+  padding: 80px 0;
+
+  @media(max-width: 1199px) {
+    padding: 65px 0;
+  }
+
+  @media(max-width: 767px) {
+    padding: 40px 0;
+  }
+
+  @media(max-width: 575px) {
+    top: 0;
+    left: 0;
+    height: max-content;
+    z-index: 2000;
+    padding: 0;
+    background: #ffffff;
+  }
+
+  &__title {
+    br {
+      display: none;
+    }
+
+    @media(max-width: 575px) {
+      margin-top: 50px;
+
+      br {
+        display: block;
+      }
+    }
+  }
+  &__wrap {
+    align-items: center;
+
+    @media(max-width: 575px) {
+      padding: 0 15px;
+    }
+  }
+}
